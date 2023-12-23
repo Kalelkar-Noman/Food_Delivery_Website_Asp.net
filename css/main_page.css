@@ -1,0 +1,227 @@
+﻿.mainpage-container {
+    /* position: relative;
+  padding-left: 3rem;
+  background-color: #d1d1d1; */
+    /* height: 30vh; */
+    /* width: 100vw; */
+    /* background-color: skyblue; */
+    margin-top:90px;
+    position: relative;
+    padding: 0 4rem;
+    background-color: #d1d1d1;
+    /* height: 30vh; */
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+    /* width: 100vw; */
+    /* background-color: skyblue;*/
+}
+
+.carousel-items {
+    /* white-space: nowrap; */
+    /* height: fit-content; */
+    /* overflow-y: hidden;
+   overflow-x: auto; */
+    /* overflow: hidden; */
+    display: flex;
+    gap: 1rem;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.inner-con {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 2rem;
+    margin: 0.5rem 0.9rem;
+    background-color: rgb(255, 203, 135);
+}
+
+.menu-scroller {
+    margin: 5px auto;
+    display: flex;
+    height: 3rem;
+    border-radius: 3rem;
+    width: 3rem;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-con > p {
+    margin: 5px auto 1.5rem auto;
+    font-size: small;
+}
+
+.carousel-prev {
+    /* background-color: black; */
+    background-color: #d1d1d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 4rem;
+    visibility: hidden;
+}
+
+.carousel-next {
+    /* background-color: black; */
+    background-color: #d1d1d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 4rem;
+}
+
+.carousel-arrow {
+    cursor:pointer;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 3rem;
+}
+/* cards */
+.product-cards {
+    background-color: #d1d1d1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+    gap: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.product-card {
+    width: 15rem;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 50px auto;
+    overflow: hidden;
+    background: #fafafa;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out; /* Add hover effect */
+}
+
+    .product-card:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Enhance shadow */
+    }
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: red;
+    color: #fff;
+    padding: 3px 10px;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    padding: 1rem;
+    background: #f0f0f0;
+}
+
+    .product-tumb img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+.product-details {
+    padding: 1rem;
+}
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+    .product-details h4 a:hover {
+        color: #fbb72c;
+    }
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+    .product-bottom-details div {
+        float: left;
+        width: 50%;
+    }
+
+.product-price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+    .product-price small {
+        font-size: 80%;
+        font-weight: 400;
+        text-decoration: line-through;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+.product-links {
+    text-align: right;
+}
+
+    .product-links a {
+        display: inline-block;
+        margin-left: 5px;
+        color: #e1e1e1;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+        .product-links a:hover {
+            color: #fbb72c;
+        }
