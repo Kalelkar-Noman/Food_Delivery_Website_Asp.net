@@ -52,10 +52,15 @@ button {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
 }
-
+/*
 body {
     background-color: var(--body-color);
     color: var(--text-color);
+}*/
+body {
+    background-image: url("/Img/bg-image.png"); /* Replace with your image path */
+    background-attachment: fixed; /* Keep the image fixed during scrolling */
+    background-size: cover; /* Stretch the image to cover the entire viewport */
 }
 
 input,
