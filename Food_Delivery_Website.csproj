@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\index.css" />
-    <Content Include="css\main_page.css" />
+    <Content Include="css\mainpage.css" />
     <Content Include="css\signup.css" />
     <Content Include="Img\bg-image.png" />
     <Content Include="Img\pizza.png" />

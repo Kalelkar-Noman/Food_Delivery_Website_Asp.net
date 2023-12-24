@@ -1,28 +1,14 @@
 ﻿/*96, 1, 71*/
 .mainpage-container {
-    /* position: relative;
-  padding-left: 3rem;
-  background-color: #d1d1d1; */
-    /* height: 30vh; */
-    /* width: 100vw; */
-    /* background-color: skyblue; */
     margin-top: 90px;
     position: relative;
     padding: 0 4rem;
-    /*background-color: #d1d1d1;*/
-    /* height: 30vh; */
     scroll-behavior: smooth;
     scroll-snap-align: start;
-    /* width: 100vw; */
-    /* background-color: skyblue;*/
+    background-color: #bbbab9;
 }
 
 .carousel-items {
-    /* white-space: nowrap; */
-    /* height: fit-content; */
-    /* overflow-y: hidden;
-   overflow-x: auto; */
-    /* overflow: hidden; */
     display: flex;
     gap: 1rem;
     height: fit-content;
@@ -55,8 +41,6 @@
 }
 
 .carousel-prev {
-    /* background-color: black; */
-    background-color: #d1d1d1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,8 +54,6 @@
 }
 
 .carousel-next {
-    /* background-color: black; */
-    /*background-color: #d1d1d1;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,13 +74,10 @@
     height: 3rem;
     width: 3rem;
     border-radius: 3rem;
-
-
-
 }
+
 /* cards */
 .product-cards {
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -107,6 +86,7 @@
     align-items: center;
     padding: 0 3rem;
     gap: 3rem;
+    background-color: #bbbab9;
 }
 
 a {
@@ -121,12 +101,12 @@ a {
     overflow: hidden;
     background: #fafafa;
     border-radius: 1rem;
-    transition: all 0.3s ease-in-out; /* Add hover effect */
+    transition: all 0.3s ease-in-out;
 }
 
     .product-card:hover {
-        transform: scale(1.05); /* Slight zoom on hover */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Enhance shadow */
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     }
 
 .badge {

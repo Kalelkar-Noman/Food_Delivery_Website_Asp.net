@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="Main_Page.aspx.cs" Inherits="Food_Delivery_Website.Main_Page" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css/main_page.css" rel="stylesheet" />
+    <link href="css/mainpage.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%-- main --%>
