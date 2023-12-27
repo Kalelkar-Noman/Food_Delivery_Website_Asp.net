@@ -1,5 +1,4 @@
-﻿
-// Select elements for efficient access
+﻿// Select elements for efficient access
 const carouselItems = document.querySelector(".carousel-items");
 const carouselNextButton = document.querySelector(".carousel-next");
 const carouselPrevButton = document.querySelector(".carousel-prev");
@@ -48,4 +47,45 @@ carouselPrevButton.addEventListener("click", () => {
         prevButtonVisible = false;
         carouselPrevButton.style.visibility = "hidden";
     }
+});
+//
+const cartbutton = document.getElementById("cart-button");
+const cartclosebutton = document.getElementById("cart-close");
+cartclosebutton.addEventListener("click", () => {
+    console.log("clicking");
+    document.getElementById("mySidepanel").classList.toggle("active");
+    console.log("clicked");
+});
+cartbutton.addEventListener("click", () => {
+    // event.preventDefault();
+    console.log("clicking");
+    document.getElementById("mySidepanel").classList.toggle("active");
+    console.log("clicked");
+});
+function toggleNav() {
+    document.getElementById("mySidepanel").classList.toggle("active");
+}
+
+//
+// Get the quantity input and buttons
+const quantityInput = document.querySelector(".quantity input");
+const minusBtn = document.querySelector(".minus-btn");
+const plusBtn = document.querySelector(".plus-btn");
+
+// Decrement quantity
+minusBtn.addEventListener("click", (event) => {
+
+    event.preventDefault();
+    let currentQuantity = parseInt(quantityInput.value);
+    if (currentQuantity > 1) {
+        quantityInput.value = currentQuantity - 1;
+    }
+});
+
+// Increment quantity
+plusBtn.addEventListener("click", (event) => {
+
+    event.preventDefault();
+    let currentQuantity = parseInt(quantityInput.value);
+    quantityInput.value = currentQuantity + 1;
 });
