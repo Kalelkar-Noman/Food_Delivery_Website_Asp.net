@@ -69,14 +69,19 @@
   <ItemGroup>
     <Content Include="css\index.css" />
     <Content Include="css\mainpage.css" />
+    <Content Include="css\ProductDetails.css" />
+    <Content Include="css\Profile_page.css" />
     <Content Include="css\signup.css" />
     <Content Include="Img\bg-image.png" />
     <Content Include="Img\pizza.png" />
     <Content Include="js\index.js" />
     <Content Include="js\mainpage.js" />
+    <Content Include="js\ProductDetail.js" />
     <Content Include="Main_Page.aspx" />
+    <Content Include="Profile_Page.aspx" />
     <Content Include="SignUp-User.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Product_Details.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="index.Master.cs">
@@ -93,6 +98,13 @@
     <Compile Include="Main_Page.aspx.designer.cs">
       <DependentUpon>Main_Page.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profile_Page.aspx.cs">
+      <DependentUpon>Profile_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile_Page.aspx.designer.cs">
+      <DependentUpon>Profile_Page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp-User.aspx.cs">
       <DependentUpon>SignUp-User.aspx</DependentUpon>
@@ -100,6 +112,13 @@
     </Compile>
     <Compile Include="SignUp-User.aspx.designer.cs">
       <DependentUpon>SignUp-User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Details.aspx.cs">
+      <DependentUpon>Product_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product_Details.aspx.designer.cs">
+      <DependentUpon>Product_Details.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

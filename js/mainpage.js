@@ -56,16 +56,17 @@ cartclosebutton.addEventListener("click", () => {
     document.getElementById("mySidepanel").classList.toggle("active");
     console.log("clicked");
 });
-cartbutton.addEventListener("click", () => {
-    // event.preventDefault();
+cartbutton.addEventListener("click", (event) => {
+    event.preventDefault();
     console.log("clicking");
     document.getElementById("mySidepanel").classList.toggle("active");
     console.log("clicked");
 });
+/*
 function toggleNav() {
     document.getElementById("mySidepanel").classList.toggle("active");
 }
-
+*/
 //
 // Get the quantity input and buttons
 const quantityInput = document.querySelector(".quantity input");
@@ -74,7 +75,6 @@ const plusBtn = document.querySelector(".plus-btn");
 
 // Decrement quantity
 minusBtn.addEventListener("click", (event) => {
-
     event.preventDefault();
     let currentQuantity = parseInt(quantityInput.value);
     if (currentQuantity > 1) {
@@ -84,7 +84,6 @@ minusBtn.addEventListener("click", (event) => {
 
 // Increment quantity
 plusBtn.addEventListener("click", (event) => {
-
     event.preventDefault();
     let currentQuantity = parseInt(quantityInput.value);
     quantityInput.value = currentQuantity + 1;

@@ -65,7 +65,7 @@
           </div>
           <div class="column">
             <input type="text" placeholder="Enter your region" required />
-            <input type="number" placeholder="Enter postal code" required />
+            <input type="number" placeholder="Enter pin code" required />
           </div>
         </div>
         <button>Submit</button>
