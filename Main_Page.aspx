@@ -105,8 +105,8 @@
           <img src="/img/pizza.png" alt="" />
         </div>
         <div class="product-details">
-          <span class="product-catagory">Women,bag</span>
-          <h4><a href="#">Women leather bag</a></h4>
+          <span class="product-catagory">Product,me</span>
+          <h4><a href="#">Product Name</a></h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
             possimus nostrum!
@@ -127,8 +127,8 @@
           <img src="/img/pizza.png" alt="" />
         </div>
         <div class="product-details">
-          <span class="product-catagory">Women,bag</span>
-          <h4><a href="#">Women leather bag</a></h4>
+          <span class="product-catagory">Product,me</span>
+          <h4><a href="#">Product Name</a></h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
             possimus nostrum!
@@ -149,8 +149,8 @@
           <img src="/img/pizza.png" alt="" />
         </div>
         <div class="product-details">
-          <span class="product-catagory">Women,bag</span>
-          <h4><a href="#">Women leather bag</a></h4>
+          <span class="product-catagory">Product,me</span>
+          <h4><a href="#">Product Name</a></h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
             possimus nostrum!
@@ -171,8 +171,8 @@
           <img src="/img/pizza.png" alt="" />
         </div>
         <div class="product-details">
-          <span class="product-catagory">Women,bag</span>
-          <h4><a href="#">Women leather bag</a></h4>
+          <span class="product-catagory">Product,me</span>
+          <h4><a href="#">Product Name</a></h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
             possimus nostrum!
@@ -193,8 +193,8 @@
           <img src="/img/pizza.png" alt="" />
         </div>
         <div class="product-details">
-          <span class="product-catagory">Women,bag</span>
-          <h4><a href="#">Women leather bag</a></h4>
+          <span class="product-catagory">Product,me</span>
+          <h4><a href="#">Product Name</a></h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
             possimus nostrum!
@@ -216,8 +216,8 @@
           <img src="/img/pizza.png" alt="" />
         </div>
         <div class="product-details">
-          <span class="product-catagory">Women,bag</span>
-          <h4><a href="#">Women leather bag</a></h4>
+          <span class="product-catagory">Product,me</span>
+          <h4><a href="#">Product Name</a></h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
             possimus nostrum!
@@ -239,8 +239,8 @@
           <img src="/img/pizza.png" alt="" />
         </div>
         <div class="product-details">
-          <span class="product-catagory">Women,bag</span>
-          <h4><a href="#">Women leather bag</a></h4>
+          <span class="product-catagory">Product,me</span>
+          <h4><a href="#">Product Name</a></h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
             possimus nostrum!
@@ -262,8 +262,8 @@
           <img src="/img/pizza.png" alt="" />
         </div>
         <div class="product-details">
-          <span class="product-catagory">Women,bag</span>
-          <h4><a href="#">Women leather bag</a></h4>
+          <span class="product-catagory">Product,me</span>
+          <h4><a href="#">Product Name</a></h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
             possimus nostrum!

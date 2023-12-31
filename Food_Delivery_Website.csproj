@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CheckoutPage.aspx" />
+    <Content Include="css\Checkout.css" />
     <Content Include="css\index.css" />
     <Content Include="css\mainpage.css" />
     <Content Include="css\ProductDetails.css" />
@@ -84,6 +86,13 @@
     <Content Include="Product_Details.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckoutPage.aspx.cs">
+      <DependentUpon>CheckoutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckoutPage.aspx.designer.cs">
+      <DependentUpon>CheckoutPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.Master.cs">
       <DependentUpon>index.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
