@@ -74,6 +74,10 @@
     <Content Include="css\ProductDetails.css" />
     <Content Include="css\Profile_page.css" />
     <Content Include="css\signup.css" />
+    <Content Include="DB\Food_Delivery.mdf" />
+    <Content Include="DB\Food_Delivery_log.ldf">
+      <DependentUpon>Food_Delivery.mdf</DependentUpon>
+    </Content>
     <Content Include="Img\bg-image.png" />
     <Content Include="Img\pizza.png" />
     <Content Include="js\index.js" />

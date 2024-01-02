@@ -36,7 +36,7 @@
                   </li>
 
                   <li class="nav__item">
-                     <a href="#" class="nav__link">Contact Me</a>
+                     <a href="#" class="nav__link">Contact Us</a>
                   </li>
                </ul>
 
@@ -114,6 +114,10 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <%--  --%>
+
+        <%--  --%>
+
         <%-- footer --%>
         <div class="footer">
       <div class="heading">
