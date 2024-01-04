@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CheckoutPage.aspx" />
+    <Content Include="css\admin_css.css" />
     <Content Include="css\Checkout.css" />
     <Content Include="css\index.css" />
     <Content Include="css\mainpage.css" />
@@ -80,6 +81,7 @@
     </Content>
     <Content Include="Img\bg-image.png" />
     <Content Include="Img\pizza.png" />
+    <Content Include="js\admin_page.js" />
     <Content Include="js\index.js" />
     <Content Include="js\mainpage.js" />
     <Content Include="js\ProductDetail.js" />
@@ -88,6 +90,7 @@
     <Content Include="SignUp-User.aspx" />
     <Content Include="Web.config" />
     <Content Include="Product_Details.aspx" />
+    <Content Include="Admin.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckoutPage.aspx.cs">
@@ -133,6 +136,13 @@
     <Compile Include="Product_Details.aspx.designer.cs">
       <DependentUpon>Product_Details.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.Master" />
@@ -144,7 +154,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UploadedImages\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
