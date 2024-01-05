@@ -24,8 +24,14 @@
     background-color: rgb(255, 203, 135);
 }
 
+.inner-con:hover {
+ background-color: white;
+ transition: all 0.5s ease-in-out;
+}
+
 .menu-scroller {
     margin: 5px auto;
+    margin-bottom: 0;
     display: flex;
     height: 3rem;
     border-radius: 3rem;
@@ -36,9 +42,25 @@
 }
 
 .inner-con > p {
-    margin: 5px auto 1.5rem auto;
+    /*    margin: 5px auto 1.5rem auto;
+    font-size: small;*/
     font-size: small;
+    /* text-align: center; */
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/*.menu-scroller:hover {
+    border-radius: 3rem 3rem 0 0;
+}*/
+
+/*.inner-con > p:hover {
+    background-color: white;
+    border-radius: 0 0 3rem 3rem;
+}*/
 
 .carousel-prev {
     display: flex;
@@ -228,18 +250,18 @@ a {
     cursor: pointer;
     /*  */
     background: rgba(98, 98, 98, 0.5);
-   /* -webkit-backdrop-filter: blur(10px);*/
+    /* -webkit-backdrop-filter: blur(10px);*/
     backdrop-filter: blur(10px);
     border: 1px solid rgba(98, 98, 98, 0.25);
 }
 
 /* Style for the side panel */
 .sidepanel {
-    margin-top:90px;
+    margin-top: 90px;
     height: 100vh;
     width: 0;
     transition: transform 0.5s ease-in-out;
-   /* transform: translateX(100%);*/
+    /* transform: translateX(100%);*/
     position: fixed;
     z-index: 1;
     top: 0;
@@ -329,3 +351,8 @@ a {
     text-align: center;
 }
 
+.ri-shopping-cart-fill {
+    color: black;
+    font-size: x-large;
+    text-align: center;
+}

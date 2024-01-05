@@ -88,3 +88,20 @@ plusBtn.addEventListener("click", (event) => {
     let currentQuantity = parseInt(quantityInput.value);
     quantityInput.value = currentQuantity + 1;
 });
+
+window.onload = function () {
+    const elems = document.querySelectorAll(".category_icon");
+    elems.forEach((element) => {
+        switch (element.textContent) {
+            case "sushi":
+                element.innerHTML = "🍣";
+                break;
+            case "burger":
+                element.innerHTML = "🍔";
+                break;
+            case "pizza":
+                element.innerHTML = "🍕";
+                break;
+        }
+    });
+};
