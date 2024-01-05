@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="SignUp-User.aspx.cs" Inherits="Food_Delivery_Website.SignUp_User" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="SignUp-User.aspx.cs" Inherits="Food_Delivery_Website.SignUp_User" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/signup.css" rel="stylesheet" />

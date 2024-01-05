@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.master.cs" Inherits="Food_Delivery_Website.index" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="Food_Delivery_Website.Index" %>
 
 <!DOCTYPE html>
 <html>
@@ -12,104 +12,117 @@
 </head>
 <body>
     <form id="form1" runat="server">
-           <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <nav class="nav container">
-            <a href="#" class="nav__logo">Logo</a>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Logo</a>
 
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li class="nav__item">
-                     <a href="Main_Page.aspx" class="nav__link">Home</a>
-                  </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="Main_Page.aspx" class="nav__link">Home</a>
+                        </li>
 
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">About Us</a>
-                  </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">About Us</a>
+                        </li>
 
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">Services</a>
-                  </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Services</a>
+                        </li>
 
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">Featured</a>
-                  </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Featured</a>
+                        </li>
 
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">Contact Us</a>
-                  </li>
-               </ul>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Contact Us</a>
+                        </li>
+                    </ul>
 
-               <!-- Close button -->
-               <div class="nav__close" id="nav-close">
-                  <i class="ri-close-line"></i>
-               </div>
+                    <!-- Close button -->
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__actions">
+                    <!-- Search button -->
+                    <i class="ri-search-line nav__search" id="search-btn"></i>
+
+                    <!-- Login button -->
+                    <i class="ri-user-line nav__login" id="login-btn"></i>
+
+                    <!-- Toggle button -->
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== SEARCH ====================-->
+        <div class="search" id="search">
+            <section action="#" class="search__form">
+                <%--<i class="ri-search-line search__icon"></i>--%>
+                <asp:Button CssClass="ri-search-line search__icon" ID="Search_Btn" runat="server" Text="&#xF0D1;" OnClick="Search_Btn_Click" />
+                <%--<input type="search" placeholder="What are you looking for?" class="search__input">--%>
+                <asp:TextBox ID="Search_text" runat="server" placeholder="What are you looking for?"  CssClass="search__input" ></asp:TextBox>
+            </section>
+            <div class="search_result_container">
+                <asp:Repeater ID="Search_Repeater" runat="server">
+                    <ItemTemplate>
+                        <div class="search_result_items">
+                            <a href="#">
+                                <img src="./UploadedImages/<%#DataBinder.Eval(Container,"DataItem.item_image")%>" />
+                                <p><%#DataBinder.Eval(Container,"DataItem.item_name")%></p>
+                                <p>$<%#DataBinder.Eval(Container,"DataItem.item_price")%></p>
+                            </a>
+                        </div>         
+                    </ItemTemplate>
+             </asp:Repeater>
             </div>
+            <i class='ri-close-line search__close' id='search-close'></i>
+        </div>
 
-            <div class="nav__actions">
-               <!-- Search button -->
-               <i class="ri-search-line nav__search" id="search-btn"></i>
+        <!--==================== LOGIN ====================-->
+        <div class="login" id="login">
+            <section action="#" class="login__form">
+                <h2 class="login__title">Log In</h2>
 
-               <!-- Login button -->
-               <i class="ri-user-line nav__login" id="login-btn"></i>
+                <div class="login__group">
+                    <div>
+                        <label for="email" class="login__label">Email</label>
+                        <input type="email" placeholder="Write your email" id="email" class="login__input">
+                    </div>
 
-               <!-- Toggle button -->
-               <div class="nav__toggle" id="nav-toggle">
-                  <i class="ri-menu-line"></i>
-               </div>
-            </div>
-         </nav>
-      </header>
+                    <div>
+                        <label for="password" class="login__label">Password</label>
+                        <input type="password" placeholder="Enter your password" id="password" class="login__input">
+                    </div>
+                </div>
 
-      <!--==================== SEARCH ====================-->
-      <div class="search" id="search">
-         <section action="#" class="search__form">
-            <i class="ri-search-line search__icon"></i>
-            <input type="search" placeholder="What are you looking for?" class="search__input">
-         </section>
+                <div>
+                    <p class="login__signup">
+                        You do not have an account? <a href="SignUp-User.aspx">Sign up</a>
+                    </p>
 
-         <i class="ri-close-line search__close" id="search-close"></i>
-      </div>
+                    <a href="#" class="login__forgot">You forgot your password
+                    </a>
 
-      <!--==================== LOGIN ====================-->
-      <div class="login" id="login">
-         <section action="#" class="login__form">
-            <h2 class="login__title">Log In</h2>
-            
-            <div class="login__group">
-               <div>
-                  <label for="email" class="login__label">Email</label>
-                  <input type="email" placeholder="Write your email" id="email" class="login__input">
-               </div>
-               
-               <div>
-                  <label for="password" class="login__label">Password</label>
-                  <input type="password" placeholder="Enter your password" id="password" class="login__input">
-               </div>
-            </div>
+                    <%--<button type="submit" class="login__button">Log In</button>--%>
+                    <asp:Button CssClass="login__button" ID="Button1" runat="server" Text="Log In" />
+                </div>
+            </section>
 
-            <div>
-               <p class="login__signup">
-                  You do not have an account? <a href="SignUp-User.aspx">Sign up</a>
-               </p>
-   
-               <a href="#" class="login__forgot">
-                  You forgot your password
-               </a>
-   
-               <%--<button type="submit" class="login__button">Log In</button>--%>
-                <asp:Button CssClass="login__button" ID="Button1" runat="server" Text="Log In" />
-            </div>
-         </section>
+            <i class="ri-close-line login__close" id="login-close"></i>
+        </div>
 
-         <i class="ri-close-line login__close" id="login-close"></i>
-      </div>
-
-         <!--==================== MAIN ====================-->
-   <%--   <main class="main">
+        <!--==================== MAIN ====================-->
+        <%--   <main class="main">
          <img src="img/bg-image.png" alt="image" class="main__bg">
       </main>--%>
-<%-- end headers item --%>
+        <%-- end headers item --%>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
@@ -120,69 +133,60 @@
 
         <%-- footer --%>
         <div class="footer">
-      <div class="heading">
-        <h2>LOGO<sup>&trade;</sup></h2>
-      </div>
-      <div class="content">
-        <div class="services">
-          <h4>Services</h4>
-          <p><a href="#">App developmen</a></p>
-          <p><a href="#">Web development</a></p>
-          <p><a href="#">DevOps</a></p>
-          <p><a href="#">Web designing</a></p>
+            <div class="heading">
+                <h2>LOGO<sup>&trade;</sup></h2>
+            </div>
+            <div class="content">
+                <div class="services">
+                    <h4>Services</h4>
+                    <p><a href="#">App developmen</a></p>
+                    <p><a href="#">Web development</a></p>
+                    <p><a href="#">DevOps</a></p>
+                    <p><a href="#">Web designing</a></p>
+                </div>
+                <div class="social-media">
+                    <h4>Social</h4>
+                    <p>
+                        <a href="#"><i class="fab fa-linkedin"></i>Linkedin</a>
+                    </p>
+                    <p>
+                        <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                    </p>
+                    <p>
+                        <a href="#"><i class="fab fa-github"></i>Github</a>
+                    </p>
+                    <p>
+                        <a href="#"><i class="fab fa-codepen"></i>Codepen</a>
+                    </p>
+                    <p>
+                        <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                    </p>
+                </div>
+                <div class="links">
+                    <h4>Quick links</h4>
+                    <p><a href="#">Home</a></p>
+                    <p><a href="#">About</a></p>
+                    <p><a href="#">Blogs</a></p>
+                    <p><a href="#">Contact</a></p>
+                </div>
+                <div class="details">
+                    <h4 class="address">Address</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur
+                        <br />
+                        adipisicing elit. Cupiditate, qui!
+                    </p>
+                    <h4 class="mobile">Mobile</h4>
+                    <p><a href="#">+9112233445</a></p>
+                    <h4 class="mail">Email</h4>
+                    <p><a href="#">abcdef@gmail.com</a></p>
+                </div>
+            </div>
+            <footer>
+                <hr />
+                &copy; 2021 ABCDEF Technologies Pvt. Ltd.
+            </footer>
         </div>
-        <div class="social-media">
-          <h4>Social</h4>
-          <p>
-            <a href="#"
-              ><i class="fab fa-linkedin"></i> Linkedin</a
-            >
-          </p>
-          <p>
-            <a href="#"
-              ><i class="fab fa-twitter"></i> Twitter</a
-            >
-          </p>
-          <p>
-            <a href="#"
-              ><i class="fab fa-github"></i> Github</a
-            >
-          </p>
-          <p>
-            <a href="#"
-              ><i class="fab fa-codepen"></i> Codepen</a
-            >
-          </p>
-          <p>
-            <a href="#"
-              ><i class="fab fa-instagram"></i> Instagram</a
-            >
-          </p>
-        </div>
-        <div class="links">
-          <h4>Quick links</h4>
-          <p><a href="#">Home</a></p>
-          <p><a href="#">About</a></p>
-          <p><a href="#">Blogs</a></p>
-          <p><a href="#">Contact</a></p>
-        </div>
-        <div class="details">
-          <h4 class="address">Address</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur <br />
-            adipisicing elit. Cupiditate, qui!
-          </p>
-          <h4 class="mobile">Mobile</h4>
-          <p><a href="#">+9112233445</a></p>
-          <h4 class="mail">Email</h4>
-          <p><a href="#">abcdef@gmail.com</a></p>
-        </div>
-      </div>
-      <footer>
-        <hr />
-        &copy; 2021 ABCDEF Technologies Pvt. Ltd.
-      </footer>
-    </div>
         <%-- end footer --%>
     </form>
     <%--<script src="index.js"></script>--%>

@@ -135,6 +135,43 @@ img {
     cursor: pointer;
 }
 
+.search_result_container {
+    height: 100%;
+    /*background-color: whitesmoke;*/
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: 0 22%;
+}
+
+.search_result_items {
+    max-width: 100%;
+    padding: 1vh 1vw;
+    background-color: var(--container-color);
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+    .search_result_items a {
+        display: flex;
+        max-width: 100%;
+        padding: 1vh 1vw;
+        background-color: var(--container-color);
+        /* margin-top: 1rem; */
+        border-radius: 1rem;
+        justify-content: space-between;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .search_result_items img {
+        width: 50px;
+    }
+
+    .search_result_items p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 /*=============== HEADER & NAV ===============*/
 .header {
     position: fixed;

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="CheckoutPage.aspx.cs" Inherits="Food_Delivery_Website.CheckoutPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="CheckoutPage.aspx.cs" Inherits="Food_Delivery_Website.CheckoutPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/Checkout.css" rel="stylesheet" />
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="Profile_Page.aspx.cs" Inherits="Food_Delivery_Website.Profile_Page" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="Profile_Page.aspx.cs" Inherits="Food_Delivery_Website.Profile_Page" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/Profile_page.css" rel="stylesheet" />
 </asp:Content>

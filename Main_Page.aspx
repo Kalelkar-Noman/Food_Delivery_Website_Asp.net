@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/index.Master" AutoEventWireup="true" CodeBehind="Main_Page.aspx.cs" Inherits="Food_Delivery_Website.Main_Page" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="Main_Page.aspx.cs" Inherits="Food_Delivery_Website.Main_Page" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/mainpage.css" rel="stylesheet" />
@@ -33,25 +33,7 @@
     </div>
     <div class="product-cards">
        
-            <div class="product-card">
-            <div class="badge">Hot</div>
-            <div class="product-tumb">
-                <img src="./Img/pizza.png" alt="pizza" />
-            </div>
-            <div class="product-details">
-                <span class="product-catagory">Product,me</span>
-                <h4><a href="#">name</a></h4>
-                <p>
-                    some text
-                </p>
-                <div class="product-bottom-details">
-                    <div class="product-price"><small>$96.00</small>1000</div>
-                    <div class="product-links">
-                        <a href="#"><i class="ri-shopping-cart-fill"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+         
         <asp:Repeater ID="Repeater2" runat="server">
             <ItemTemplate>
                  <div class="product-card">

@@ -11,7 +11,7 @@ namespace Food_Delivery_Website
 {
 
 
-    public partial class index
+    public partial class Index
     {
 
         /// <summary>
@@ -31,6 +31,33 @@ namespace Food_Delivery_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+        /// <summary>
+        /// Search_Btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Search_Btn;
+
+        /// <summary>
+        /// Search_text control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Search_text;
+
+        /// <summary>
+        /// Search_Repeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Search_Repeater;
 
         /// <summary>
         /// Button1 control.

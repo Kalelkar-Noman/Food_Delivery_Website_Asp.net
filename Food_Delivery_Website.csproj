@@ -100,12 +100,12 @@
     <Compile Include="CheckoutPage.aspx.designer.cs">
       <DependentUpon>CheckoutPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.Master.cs">
-      <DependentUpon>index.Master</DependentUpon>
+    <Compile Include="Index.Master.cs">
+      <DependentUpon>Index.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.Master.designer.cs">
-      <DependentUpon>index.Master</DependentUpon>
+    <Compile Include="Index.Master.designer.cs">
+      <DependentUpon>Index.Master</DependentUpon>
     </Compile>
     <Compile Include="Main_Page.aspx.cs">
       <DependentUpon>Main_Page.aspx</DependentUpon>
@@ -145,7 +145,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="index.Master" />
+    <Content Include="Index.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
