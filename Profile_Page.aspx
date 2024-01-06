@@ -12,8 +12,10 @@
             </div>
             <div class="col-4 text-right">
               <!-- <a href="#!" class="btn btn-sm btn-primary">Settings</a> -->
-              <button class="btn btn-sm btn-primary">edit</button
-              ><button class="btn btn-sm btn-primary">save</button>
+                <asp:Button CssClass="btn btn-sm btn-primary" ID="Button1" runat="server" Text="Edit" />
+                <asp:Button CssClass="btn btn-sm btn-primary" ID="Button2" runat="server" Text="Save" />
+             <%-- <button class="btn btn-sm btn-primary">edit</button
+              ><button class="btn btn-sm btn-primary">save</button>--%>
             </div>
           </div>
         </div>
@@ -27,12 +29,13 @@
                     <label class="form-control-label" for="input-username"
                       >Phone Number</label
                     >
-                    <input
+                      <asp:TextBox  type="number" ID="Input_number" CssClass="form-control form-control-alternative"  placeholder="Phone Number" runat="server"></asp:TextBox>
+                   <%-- <input
                       type="number"
                       id="input-number"
                       class="form-control form-control-alternative"
                       placeholder="Phone Number"
-                    />
+                    />--%>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -40,30 +43,32 @@
                     <label class="form-control-label" for="input-email"
                       >Email address</label
                     >
-                    <input
+                      <asp:TextBox type="email" ID="Input_email" CssClass="form-control form-control-alternative"  placeholder="xyz@example.com" runat="server"></asp:TextBox>
+                  <%--  <input
                       type="email"
                       id="input-email"
                       class="form-control form-control-alternative"
                       placeholder="xyz@example.com"
-                    />
+                    />--%>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-md-12">
                   <div class="form-group focused">
                     <label class="form-control-label" for="input-first-name"
-                      >First name</label
+                      >Your name</label
                     >
-                    <input
+                      <asp:TextBox type="text" ID="Input_name" CssClass="form-control form-control-alternative" placeholder="name" runat="server"></asp:TextBox>
+                   <%-- <input
                       type="text"
                       id="input-first-name"
                       class="form-control form-control-alternative"
                       placeholder="First name"
-                    />
+                    />--%>
                   </div>
                 </div>
-                <div class="col-lg-6">
+              <%--  <div class="col-lg-6">
                   <div class="form-group focused">
                     <label class="form-control-label" for="input-last-name"
                       >Last name</label
@@ -75,7 +80,7 @@
                       placeholder="Last name"
                     />
                   </div>
-                </div>
+                </div>--%>
               </div>
             </div>
             <hr class="my-4" />
@@ -88,12 +93,13 @@
                     <label class="form-control-label" for="input-address"
                       >Address</label
                     >
-                    <input
+                      <asp:TextBox ID="input_address" CssClass="form-control form-control-alternative" placeholder="Home Address" type="text" runat="server"></asp:TextBox>
+                    <%--<input
                       id="input-address"
                       class="form-control form-control-alternative"
                       placeholder="Home Address"
                       type="text"
-                    />
+                    />--%>
                   </div>
                 </div>
               </div>
@@ -103,12 +109,13 @@
                     <label class="form-control-label" for="input-city"
                       >City</label
                     >
-                    <input
+                      <asp:TextBox ID="Input_city" type="text" CssClass="form-control form-control-alternative" placeholder="City" runat="server"></asp:TextBox>
+                    <%--<input
                       type="text"
                       id="input-city"
                       class="form-control form-control-alternative"
                       placeholder="City"
-                    />
+                    />--%>
                   </div>
                 </div>
                   <div class="col-lg-4">
@@ -116,12 +123,13 @@
                     <label class="form-control-label" for="input-city"
                       >City</label
                     >
-                    <input
+                      <asp:TextBox type="text" ID="Input_state" CssClass="form-control form-control-alternative" placeholder="State" runat="server"></asp:TextBox>
+                    <%--<input
                       type="text"
                       id="input-state"
                       class="form-control form-control-alternative"
                       placeholder="State"
-                    />
+                    />--%>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -129,12 +137,13 @@
                     <label class="form-control-label" for="input-country"
                       >Country</label
                     >
-                    <input
+                      <asp:TextBox type="text" ID="Input_country" CssClass="form-control form-control-alternative" placeholder="Country" runat="server"></asp:TextBox>
+                    <%--<input
                       type="text"
                       id="input-country"
                       class="form-control form-control-alternative"
                       placeholder="Country"
-                    />
+                    />--%>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -142,12 +151,13 @@
                     <label class="form-control-label" for="input-country"
                       >Pin code</label
                     >
-                    <input
+                      <asp:TextBox type="number" CssClass="form-control form-control-alternative"  placeholder="Pin code" ID="Input_pincode" runat="server"></asp:TextBox>
+                    <%--<input
                       type="number"
                       id="input-postal-code"
                       class="form-control form-control-alternative"
                       placeholder="Pin code"
-                    />
+                    />--%>
                   </div>
                 </div>
               </div>

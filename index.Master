@@ -25,19 +25,19 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="#" class="nav__link">About Us</a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Services</a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Featured</a>
-                        </li>
-
-                        <li class="nav__item">
                             <a href="#" class="nav__link">Contact Us</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="CheckoutPage.aspx" class="nav__link">Checkout</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="Admin.aspx" class="nav__link">Administration</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Order History</a>
                         </li>
                     </ul>
 

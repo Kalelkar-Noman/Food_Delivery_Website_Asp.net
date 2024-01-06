@@ -1,4 +1,13 @@
-﻿/*=============== SHOW MENU ===============*/
+﻿window.addEventListener('load', function () {
+    console.log("hello");
+    // Check if the cookie exists
+    if (!document.cookie.includes('loginstatus')) {
+        // Create the cookie with the value "false"
+        document.cookie = 'loginstatus=false; expires=Fri, 31 Dec 2034 23:59:59 GMT';
+    }
+    console.log(document.cookie);
+});
+/*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
@@ -32,6 +41,7 @@ searchClose.addEventListener('click', () => {
 const login = document.getElementById('login'),
     loginBtn = document.getElementById('login-btn'),
     loginClose = document.getElementById('login-close')
+
 
 /* Login show */
 loginBtn.addEventListener('click', () => {
