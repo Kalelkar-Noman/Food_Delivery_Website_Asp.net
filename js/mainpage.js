@@ -105,3 +105,17 @@ window.onload = function () {
         }
     });
 };
+//function inner() {
+//    const innerConLinks = document.querySelectorAll('.inner-con');
+//     innerConLinks.forEach(link => {
+//         link.addEventListener('click', () => {
+//             event.preventDefault();
+//             // Remove "active" class from all links
+//             innerConLinks.forEach(link => link.classList.remove('inner-con-active'));
+//             console.log("1");
+//             // Add "active" class to the clicked link and make it red
+//             link.classList.add('inner-con-active');
+//             console.log("2");
+//         });
+//     });
+//}

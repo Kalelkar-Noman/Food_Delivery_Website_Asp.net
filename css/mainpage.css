@@ -21,9 +21,14 @@
     padding: 5px;
     border-radius: 2rem;
     margin: 0.5rem 0.9rem;
+    /*background-color: rgb(255, 203, 135);*/
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.inner-con-active {
     background-color: rgb(255, 203, 135);
 }
-
 .inner-con:hover {
  background-color: white;
  transition: all 0.5s ease-in-out;
@@ -149,7 +154,7 @@ a {
     justify-content: center;
     height: 10rem;
     padding: 1rem;
-    background: #f0f0f0;
+    /*background: #f0f0f0;*/
 }
 
     .product-tumb img {

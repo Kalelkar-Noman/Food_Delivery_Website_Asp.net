@@ -139,7 +139,7 @@ img {
     height: 100%;
     /*background-color: whitesmoke;*/
     overflow: hidden;
-    overflow-x: scroll;
+    overflow-y: auto;
     padding: 0 22%;
 }
 

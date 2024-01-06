@@ -85,6 +85,7 @@
     <Content Include="js\index.js" />
     <Content Include="js\mainpage.js" />
     <Content Include="js\ProductDetail.js" />
+    <Content Include="js\Signup.js" />
     <Content Include="Main_Page.aspx" />
     <Content Include="Profile_Page.aspx" />
     <Content Include="SignUp-User.aspx" />

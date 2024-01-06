@@ -6,6 +6,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%-- main --%>
+    <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
+    <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional"><ContentTemplate>--%>
     <div class="mainpage-container">
         <div class="carousel-prev">
             <div class="carousel-arrow"><</div>
@@ -14,16 +16,24 @@
             <div class="carousel-arrow">></div>
         </div>
         <div class="carousel-items">
-            <div class="inner-con">
+            <%--<div class="inner-con">
                 <div class="menu-scroller"><span class="category_icon">All</span></div>
                 <p class="mybtn">All</p>
-            </div>
+            </div>--%>
+            <asp:LinkButton ID="Inner_Menu" runat="server" CssClass="inner-con inner-con-active" CommandArgument="%%" OnClick="Inner_Menu_Click">  
+                        <div class="menu-scroller"><span class="category_icon">All</span></div>
+                        <p class="mybtn">All</p>
+                      </asp:LinkButton>
             <asp:Repeater ID="Repeater1" runat="server">
                 <ItemTemplate>
-                    <div class="inner-con">
+                    <%--<div class="inner-con" >--%>
+                    <asp:LinkButton ID="Inner_Menu" runat="server" CssClass="inner-con" CommandArgument=<%#DataBinder.Eval(Container,"DataItem.item_category")%> OnClick="Inner_Menu_Click" >
+     
                         <div class="menu-scroller"><span class="category_icon"><%#DataBinder.Eval(Container,"DataItem.item_category")%></span></div>
                         <p class="mybtn"><%#DataBinder.Eval(Container,"DataItem.item_category")%></p>
-                    </div>
+                           
+                      </asp:LinkButton>
+                    <%--</div>--%>
                 </ItemTemplate>
 
             </asp:Repeater>
@@ -94,7 +104,7 @@
         </div>
         <!--  -->
     </div>
-
+        <%--</ContentTemplate> <Triggers>  <asp:AsyncPostBackTrigger ControlID="Inner_Menu" EventName="OnClick" /></Triggers></asp:UpdatePanel>--%>
     <%--  --%>
     <%-- main --%>
     <script src="js/mainpage.js"></script>

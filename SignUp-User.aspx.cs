@@ -11,7 +11,16 @@ namespace Food_Delivery_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HttpCookie cookie = Request.Cookies["user_otp"];
+            if (cookie != null)
+            {
+                string cookieValue = cookie.Value;
+                Response.Write(cookieValue);
+            }
+            else
+            {
+                Response.Write("cookie not found");
+            }
         }
     }
 }

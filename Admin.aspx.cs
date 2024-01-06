@@ -7,12 +7,15 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.IO;
 using System.Data;
+using System.Configuration;
+
 namespace Food_Delivery_Website
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        readonly SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\KNA\\Documents\\Projects_College\\Food_Delivery_Website\\DB\\Food_Delivery.mdf;Integrated Security=True;Connect Timeout=30");
-      public void Refresher(string Query)
+        //readonly SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\KNA\\Documents\\Projects_College\\Food_Delivery_Website\\DB\\Food_Delivery.mdf;Integrated Security=True;Connect Timeout=30");
+        readonly SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Food_DeliveryConnectionString"].ConnectionString);
+        public void Refresher(string Query)
         {
             SqlCommand cmd = new SqlCommand(Query, con);
             try

@@ -24,7 +24,8 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: rgb(130, 106, 251);
+    /*background: rgb(130, 106, 251);*/
+    background: #bbbab9;
 }
 .signup_inner_container {
     /*position: relative;*/
@@ -156,15 +157,25 @@
     grid-template-columns:30% auto;
     grid-gap:15px;
 }
-    .otp-div > input[type=submit] {
-        color: #fff;
+.otp-div #otp_btn {
+        /*  color: #fff;
         font-size: 1rem;
         font-weight: 400;
         border: none;
         cursor: pointer;
         transition: all 0.2s ease;
+        background: rgb(130, 106, 251);*/
+        height: 55px;
+        width: 100%;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 400;
+        /* margin-top: 30px; */
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
         background: rgb(130, 106, 251);
-    }
-        .otp-div > input[type=submit]:hover {
+}
+.otp-div #otp_btn:hover {
             background: rgb(88, 56, 250);
-        }
+}
