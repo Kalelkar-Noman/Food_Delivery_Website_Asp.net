@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
+   
     <title>Food Delivery</title>
     <%--<link href="index.css" rel="stylesheet" />--%>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
@@ -67,7 +68,7 @@
                 <%--<i class="ri-search-line search__icon"></i>--%>
                 <asp:Button CssClass="ri-search-line search__icon" ID="Search_Btn" runat="server" Text="&#xF0D1;" OnClick="Search_Btn_Click" />
                 <%--<input type="search" placeholder="What are you looking for?" class="search__input">--%>
-                <asp:TextBox ID="Search_text" runat="server" placeholder="What are you looking for?"  CssClass="search__input" ></asp:TextBox>
+                <asp:TextBox ID="Search_text" runat="server" placeholder="What are you looking for?" CssClass="search__input" OnTextChanged="Search_text_TextChanged" ></asp:TextBox>
             </section>
             <div class="search_result_container">
                 <asp:Repeater ID="Search_Repeater" runat="server">
@@ -92,13 +93,15 @@
 
                 <div class="login__group">
                     <div>
-                        <label for="email" class="login__label">Email</label>
-                        <input type="email" placeholder="Write your email" id="email" class="login__input">
+                        <label for="Login_Email" class="login__label">Email</label>
+                        <%--<input type="email" placeholder="Write your email" id="email" class="login__input">--%>
+                        <asp:TextBox type="email" ID="Login_Email" placeholder="Write your email" runat="server" CssClass="login__input" ></asp:TextBox>
                     </div>
 
                     <div>
-                        <label for="password" class="login__label">Password</label>
-                        <input type="password" placeholder="Enter your password" id="password" class="login__input">
+                        <label for="Login_password" class="login__label">Password</label>
+                        <%--<input  type="password" placeholder="Enter your password" id="password" class="login__input">--%>
+                        <asp:TextBox type="password" placeholder="Enter your password" ID="Login_password" runat="server" CssClass="login__input"></asp:TextBox>
                     </div>
                 </div>
 
@@ -111,7 +114,7 @@
                     </a>
 
                     <%--<button type="submit" class="login__button">Log In</button>--%>
-                    <asp:Button CssClass="login__button" ID="Button1" runat="server" Text="Log In" />
+                    <asp:Button CssClass="login__button" ID="Login_user" runat="server" OnClick="Login_user_Click" Text="Log In" />
                 </div>
             </section>
 
@@ -188,8 +191,10 @@
             </footer>
         </div>
         <%-- end footer --%>
+          <asp:ScriptManager runat="server"></asp:ScriptManager>
     </form>
     <%--<script src="index.js"></script>--%>
     <script src="js/index.js"></script>
+   
 </body>
 </html>

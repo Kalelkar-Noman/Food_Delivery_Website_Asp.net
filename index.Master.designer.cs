@@ -60,13 +60,31 @@ namespace Food_Delivery_Website
         protected global::System.Web.UI.WebControls.Repeater Search_Repeater;
 
         /// <summary>
-        /// Button1 control.
+        /// Login_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox Login_Email;
+
+        /// <summary>
+        /// Login_password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Login_password;
+
+        /// <summary>
+        /// Login_user control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Login_user;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

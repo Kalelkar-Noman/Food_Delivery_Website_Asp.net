@@ -2,7 +2,7 @@
     margin-top: 100px;
     padding: 0 3rem;
 }
-    #admin_container input[type="text"] {
+    #admin_container input[type="text"], #admin_container input[type="number"] {
         height: 50px;
         width: 100%;
         outline: none;

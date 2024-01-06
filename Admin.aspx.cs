@@ -107,7 +107,7 @@ namespace Food_Delivery_Website
 
         protected void Admin_search_submit_Click(object sender, EventArgs e)
         {
-            Refresher("select * from Items where item_id='"+Item_id.Text+"' OR item_name like '"+Item_name.Text+"' OR item_price = '"+Item_price.Text+"' OR item_category like '"+Item_category.Text+"'");
+            Refresher("select * from Items where item_id='"+Item_id.Text+"' OR item_name like '%"+Item_name.Text+"%' OR item_price = '"+Item_price.Text+"' OR item_category like '"+Item_category.Text+"'");
         }
 
         protected void Admin_delete_submit_Click(object sender, EventArgs e)
