@@ -126,7 +126,7 @@
     font-size: 1rem;
 }
 
-.form button{
+.form button, .form .submit_btn {
     height: 55px;
     width: 100%;
     color: #fff;

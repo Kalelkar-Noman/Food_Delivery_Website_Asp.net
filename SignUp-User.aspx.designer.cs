@@ -24,6 +24,15 @@ namespace Food_Delivery_Website
         protected global::System.Web.UI.WebControls.TextBox User_name;
 
         /// <summary>
+        /// Email_input control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Email_input;
+
+        /// <summary>
         /// Otp_inputbox control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace Food_Delivery_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Phone_number;
+
+        /// <summary>
+        /// User_pass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox User_pass;
 
         /// <summary>
         /// Check_male control.
@@ -121,5 +139,14 @@ namespace Food_Delivery_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Pin_input;
+
+        /// <summary>
+        /// Submit_form control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Submit_form;
     }
 }

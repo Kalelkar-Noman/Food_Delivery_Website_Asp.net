@@ -6,6 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="signup_container">
      <section class="signup_inner_container">
+        
       <header>Registration Form</header>
       <section action="#" class="form">
         <div class="input-box">
@@ -15,7 +16,8 @@
         </div>
         <div class="input-box">
           <label>Email Address</label>
-          <input type="text" placeholder="Enter email address" required />
+            <asp:TextBox ID="Email_input" type="email" required="true" placeholder="Enter email address" runat="server"></asp:TextBox>
+          <%--<input type="text" placeholder="Enter email address" required />--%>
         </div>
            <div class="input-box otp-div">
                <%--<asp:Button ID="Button1" runat="server" Text="Get OTP" />--%>
@@ -30,7 +32,12 @@
               <asp:TextBox ID="Phone_number" type="number" placeholder="Enter phone number" required="true" runat="server"></asp:TextBox>
             <%--<input type="number" placeholder="Enter phone number" required />--%>
           </div>
-       
+       <div class="input-box">
+            <label>PassWord</label>
+           <%--pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"--%>
+           <asp:TextBox ID="User_pass" type="password" placeholder="Enter Your password" minlength="8" required="true" runat="server"></asp:TextBox>
+            <%--<input type="password" placeholder="Enter birth date" required />--%>
+          </div>
         </div>
         <div class="gender-box">
           <h3>Gender</h3>
@@ -60,12 +67,12 @@
           <%--<input type="text" placeholder="Enter street address line 2" required />--%>
           <div class="column">
               <asp:DropDownList CssClass="select-box" ID="Countrylist" runat="server">
-                  <asp:listitem>India</asp:listitem>
-                  <asp:ListItem>America</asp:ListItem>
-                  <asp:listitem>Japan</asp:listitem>
-                  <asp:listitem>Russia</asp:listitem>
-                  <asp:listitem>China</asp:listitem>
-                  <asp:listitem>Brazil</asp:listitem>
+                  <asp:listitem Value="india">India</asp:listitem>
+                  <asp:ListItem Value="america">America</asp:ListItem>
+                  <asp:listitem Value="japan">Japan</asp:listitem>
+                  <asp:listitem Value="russia">Russia</asp:listitem>
+                  <asp:listitem Value="china">China</asp:listitem>
+                  <asp:listitem Value="brazil">Brazil</asp:listitem>
               </asp:DropDownList>
 
            <%-- <div class="select-box">
@@ -85,9 +92,11 @@
             <%--<input type="text" placeholder="Enter your state" required />--%>
               <asp:TextBox ID="Pin_input" type="number" placeholder="Enter pin code" runat="server"></asp:TextBox>
             <%--<input type="number" placeholder="Enter pin code" required />--%>
+
           </div>
         </div>
-        <button>Submit</button>
+          <asp:Button CssClass="submit_btn" ID="Submit_form" runat="server" Text="Submit" OnClick="Submit_form_Click" />
+        <%--<button>Submit</button>--%>
       </section>
     </section>
     </div>
