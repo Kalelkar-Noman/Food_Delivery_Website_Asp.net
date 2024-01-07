@@ -12,8 +12,8 @@
             </div>
             <div class="col-4 text-right">
               <!-- <a href="#!" class="btn btn-sm btn-primary">Settings</a> -->
-                <asp:Button CssClass="btn btn-sm btn-primary" ID="Button1" runat="server" Text="Edit" />
-                <asp:Button CssClass="btn btn-sm btn-primary" ID="Button2" runat="server" Text="Save" />
+                <asp:Button CssClass="btn btn-sm btn-primary" ID="Edit" OnClick="Edit_Click" runat="server" Text="Edit" />
+                <asp:Button CssClass="btn btn-sm btn-primary" ID="Save" runat="server" OnClick="Save_Click" Text="Save" />
              <%-- <button class="btn btn-sm btn-primary">edit</button
               ><button class="btn btn-sm btn-primary">save</button>--%>
             </div>
@@ -54,7 +54,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-lg-6">
                   <div class="form-group focused">
                     <label class="form-control-label" for="input-first-name"
                       >Your name</label
@@ -68,19 +68,15 @@
                     />--%>
                   </div>
                 </div>
-              <%--  <div class="col-lg-6">
-                  <div class="form-group focused">
+                <div class="col-lg-6">
+                  <div class="form-group ">
                     <label class="form-control-label" for="input-last-name"
-                      >Last name</label
+                      >Password</label
                     >
-                    <input
-                      type="text"
-                      id="input-last-name"
-                      class="form-control form-control-alternative"
-                      placeholder="Last name"
-                    />
+                      <asp:TextBox type="password" ID="Input_password" CssClass="form-control form-control-alternative" placeholder="Last name" runat="server"></asp:TextBox>
+             
                   </div>
-                </div>--%>
+                </div>
               </div>
             </div>
             <hr class="my-4" />

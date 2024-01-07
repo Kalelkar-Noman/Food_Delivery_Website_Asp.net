@@ -37,7 +37,7 @@ namespace Food_Delivery_Website
                 if (cookieValue == Convert.ToInt32(Otp_inputbox.Text))
                 {
                     Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "alertScript", "alert('successfull login.');", true);
-                    SqlCommand cmd = new SqlCommand("insert into Users(user_name,user_access,user_address,user_number,user_state,user_country,user_email,user_pincode,user_password) values('" + User_name.Text+ "','normal','" + Address_line1.Text+" "+Address_line2.Text + "','" + Phone_number.Text + "','" + State_input.Text + "','" + Countrylist.SelectedValue + "','" + Email_input.Text + "','" + Pin_input.Text + "','" + User_pass.Text + "')", con);
+                    SqlCommand cmd = new SqlCommand("insert into Users(user_name,user_access,user_address,user_number,user_state,user_country,user_email,user_pincode,user_password,user_city) values('" + User_name.Text+ "','normal','" + Address_line1.Text+" "+Address_line2.Text + "','" + Phone_number.Text + "','" + State_input.Text + "','" + Countrylist.SelectedValue + "','" + Email_input.Text + "','" + Pin_input.Text + "','" + User_pass.Text + "','"+City_input.Text+"')", con);
                     try
                     {
                         con.Open();

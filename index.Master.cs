@@ -45,6 +45,25 @@ namespace Food_Delivery_Website
                    SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows){
                     dr.Read();
+                    HttpCookie user_id = new HttpCookie("user_id")
+                    {
+                        Value = dr["id"].ToString(),
+                        Expires = DateTime.Now.AddDays(7) // Set expiration to 7 days from now
+                    };
+                    HttpCookie user_type = new HttpCookie("user_type")
+                    {
+                        Value = dr["user_access"].ToString(),
+                        Expires = DateTime.Now.AddDays(7) // Set expiration to 7 days from now
+                    };
+                    Response.Cookies.Add(user_id);
+                    Response.Cookies.Add(user_type);
+                    HttpCookie loginstatus = Request.Cookies["loginstatus"];
+                    if (loginstatus != null)
+                    {
+                        loginstatus.Value = "true";
+                        loginstatus.Expires = DateTime.Now.AddDays(7); // Optional: Update expiration
+                        Response.Cookies.Add(loginstatus);
+                    }
                 }
                 else
                 {
