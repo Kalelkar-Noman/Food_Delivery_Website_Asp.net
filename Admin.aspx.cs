@@ -55,7 +55,45 @@ namespace Food_Delivery_Website
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            Refresher("select * from Items");
+            HttpCookie cookie = Request.Cookies["user_id"];
+            string cookieValue = cookie.Value;
+            if (cookie != null)
+            {
+
+                SqlCommand cmd = new SqlCommand("select * from Users where id='" + cookieValue + "'", con);
+                try
+                {
+                    con.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+                        if (dr["user_access"].ToString() == "admin")
+                        {
+                            Refresher("select * from Items");
+                        }
+                        else
+                        {
+                            Response.Redirect("Main_Page.aspx");
+                        }
+                    }
+                }
+                catch (Exception ee)
+                {
+                    //  Response.Write(ee.Message);
+                    ScriptManager.RegisterStartupScript(Page, this.GetType(), "alert", "alert('OOPs, something went wrong''" + ee.Message + "' );", true);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            else
+            {
+                Response.Redirect("Main_Page.aspx");
+            }
+
+            
         }
 
         protected void Admin_add_submit_Click(object sender, EventArgs e)

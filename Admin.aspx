@@ -4,7 +4,7 @@
     <link href="css/admin_css.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="admin_container">
+    <div id="admin_container" class="headergap">
         <div class="admin_input_conatiner">
            <div class="admin_img_preview">
                 <asp:Image ID="Image_preview" runat="server" />
@@ -41,4 +41,5 @@
     </div>
   <%--  --%>
     <script src="js/admin_page.js"></script>
+    <script> document.title = "Admin Page";</script>
 </asp:Content>

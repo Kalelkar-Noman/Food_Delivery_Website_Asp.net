@@ -30,4 +30,5 @@
         </ItemTemplate> </asp:Repeater>
     <%--  --%>
     <script src="js/ProductDetail.js"></script>
+    <script> document.title = "Product Details";</script>
 </asp:Content>

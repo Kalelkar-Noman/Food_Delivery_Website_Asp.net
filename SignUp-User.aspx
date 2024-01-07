@@ -4,7 +4,7 @@
     <link href="css/signup.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="signup_container">
+    <div class="signup_container headergap">
      <section class="signup_inner_container">
         
       <header>Registration Form</header>
@@ -102,4 +102,5 @@
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="js/Signup.js"></script>
+    <script> document.title = "Sign-Up";</script>
 </asp:Content>

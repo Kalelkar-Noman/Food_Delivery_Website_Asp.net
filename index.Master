@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-   
+   <link rel="icon" type="image/x-icon" href="./Img/logo.jpg">
     <title>Food Delivery</title>
     <%--<link href="index.css" rel="stylesheet" />--%>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
@@ -16,7 +16,7 @@
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Logo</a>
+                <a href="#" class="nav__logo"><img src="./Img/logo.jpg" alt="." />FreshMenu</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -25,7 +25,7 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Contact Us</a>
+                            <a href="ContactUs.aspx" class="nav__link">Contact Us</a>
                         </li>
 
                         <li class="nav__item">
@@ -76,13 +76,17 @@
             <div class="search_result_container">
                 <asp:Repeater ID="Search_Repeater" runat="server">
                     <ItemTemplate>
+                        
                         <div class="search_result_items">
-                            <a href="#">
+                            <asp:HyperLink ID="Search_results" NavigateUrl='<%# "~/Product_Details.aspx?ProductId=" + DataBinder.Eval(Container, "DataItem.item_id") %>' CssClass="search_result_items" runat="server">
+                            <%--<a href="#">--%>
                                 <img src="./UploadedImages/<%#DataBinder.Eval(Container,"DataItem.item_image")%>" />
                                 <p><%#DataBinder.Eval(Container,"DataItem.item_name")%></p>
                                 <p>$<%#DataBinder.Eval(Container,"DataItem.item_price")%></p>
-                            </a>
-                        </div>         
+                            <%--</a>--%>
+                             </asp:HyperLink>
+                        </div>  
+                           
                     </ItemTemplate>
              </asp:Repeater>
                 
@@ -144,30 +148,22 @@
         <%-- footer --%>
         <div class="footer">
             <div class="heading">
-                <h2>LOGO<sup>&trade;</sup></h2>
+                <h2 class="footer_logo"><img src="./Img/logo.jpg" alt="." />FreshMenu</h2>
             </div>
             <div class="content">
                 <div class="services">
                     <h4>Services</h4>
-                    <p><a href="#">App developmen</a></p>
-                    <p><a href="#">Web development</a></p>
-                    <p><a href="#">DevOps</a></p>
-                    <p><a href="#">Web designing</a></p>
+                    <p><a href="#">Contact less</a></p>
+                    <p><a href="#">Home Delivery</a></p>
+                
                 </div>
                 <div class="social-media">
                     <h4>Social</h4>
-                    <p>
-                        <a href="#"><i class="fab fa-linkedin"></i>Linkedin</a>
-                    </p>
+               
                     <p>
                         <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
                     </p>
-                    <p>
-                        <a href="#"><i class="fab fa-github"></i>Github</a>
-                    </p>
-                    <p>
-                        <a href="#"><i class="fab fa-codepen"></i>Codepen</a>
-                    </p>
+                 
                     <p>
                         <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
                     </p>
@@ -194,7 +190,7 @@
             </div>
             <footer>
                 <hr />
-                &copy; 2021 ABCDEF Technologies Pvt. Ltd.
+                &copy; 2021 ABCDEF Delivery Pvt. Ltd.
             </footer>
         </div>
         <%-- end footer --%>

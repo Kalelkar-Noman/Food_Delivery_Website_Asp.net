@@ -3,14 +3,15 @@
     <link href="css/Checkout.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="Delivery_Page_Container">
+    <div class="Delivery_Page_Container headergap">
       <div class="Delivery_left">
         <div class="Delivery_profile del_shadows">
           <div class="del_p_img">
             <i class="ri-user-follow-line"></i>
-            <h2>User_name</h2>
+            <h2>
+              <asp:Label ID="Label1" runat="server" Text="User"></asp:Label></h2>
           </div>
-          <div class="del_logout_btn"><button>Logout</button></div>
+          <%--<div class="del_logout_btn"><button >Logout</button></div>--%>
         </div>
         <!-- address -->
         <div class="delivery_page_ad del_shadows">
@@ -84,4 +85,5 @@
         
       </div>
     </div>
+   
 </asp:Content>

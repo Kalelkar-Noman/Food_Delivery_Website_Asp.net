@@ -1,6 +1,6 @@
 ﻿/*96, 1, 71*/
 .mainpage-container {
-  margin-top: 90px;
+  /*margin-top: 90px;*/
   position: relative;
   padding: 0 4rem;
   scroll-behavior: smooth;
@@ -262,7 +262,7 @@ a {
 
 /* Style for the side panel */
 .sidepanel {
-  margin-top: 90px;
+ /* margin-top: 90px;*/
   height: 100vh;
   width: 0;
   transition: transform 0.5s ease-in-out;

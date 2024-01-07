@@ -60,11 +60,18 @@ body {
   color: var(--text-color);
 }
 
-/*body {
-    background-image: url("/Img/bg-image.png");*/ /* Replace with your image path */
-/*background-attachment: fixed;*/ /* Keep the image fixed during scrolling */
-/*background-size: cover;*/ /* Stretch the image to cover the entire viewport */
-/*}*/
+.nav__logo {
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+    .nav__logo img {
+        display: block;
+        /* max-width: 100%; */
+        height: 2rem;
+    }
 
 input,
 button {
@@ -412,14 +419,18 @@ img {
     margin-inline: auto;
   }
 }
-
+.headergap{
+    margin-top:3.5rem;
+}
 /* For large devices */
 @media screen and (min-width: 1023px) {
   .nav {
     height: calc(var(--header-height) + 2rem);
     column-gap: 3rem;
   }
-
+    .headergap {
+        margin-top: calc(var(--header-height) + 2rem);
+    }
   .nav__close,
   .nav__toggle {
     display: none;
@@ -537,3 +548,13 @@ footer hr {
   }
 }
 /*end footer*/
+.footer_logo {
+    display: flex;
+    /* align-content: center; */
+    /* justify-content: center; */
+    align-items: center;
+    gap: 5px;
+}
+.footer_logo img{
+    height:2rem;
+}

@@ -8,7 +8,7 @@
     <%-- main --%>
     <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
     <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional"><ContentTemplate>--%>
-    <div class="mainpage-container">
+    <div class="mainpage-container headergap">
         <div class="carousel-prev">
             <div class="carousel-arrow"><</div>
         </div>
@@ -87,7 +87,7 @@
             </path>
         </svg>
     </button>
-    <div id="mySidepanel" class="sidepanel">
+    <div id="mySidepanel" class="sidepanel headergap">
         <a href="#" class="closebtn" id="cart-close">×</a>
         <!-- <p>This is the side panel content.</p> -->
         <div class="cart-item">
@@ -109,5 +109,6 @@
         <%--</ContentTemplate> <Triggers>  <asp:AsyncPostBackTrigger ControlID="Inner_Menu" EventName="OnClick" /></Triggers></asp:UpdatePanel>--%>
     <%--  --%>
     <%-- main --%>
-    <script src="js/mainpage.js"></script>
+    <script src="js/mainpage.js"> </script>
+    <script> document.title = "HomePage";</script>
 </asp:Content>

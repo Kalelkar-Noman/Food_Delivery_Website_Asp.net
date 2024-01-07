@@ -68,8 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CheckoutPage.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="css\admin_css.css" />
     <Content Include="css\Checkout.css" />
+    <Content Include="css\ContactUs.css" />
     <Content Include="css\index.css" />
     <Content Include="css\mainpage.css" />
     <Content Include="css\ProductDetails.css" />
@@ -79,9 +81,10 @@
     <Content Include="DB\Food_Delivery_log.ldf">
       <DependentUpon>Food_Delivery.mdf</DependentUpon>
     </Content>
-    <Content Include="Img\bg-image.png" />
+    <Content Include="Img\logo.jpg" />
     <Content Include="Img\pizza.png" />
     <Content Include="js\admin_page.js" />
+    <Content Include="js\contactus.js" />
     <Content Include="js\index.js" />
     <Content Include="js\mainpage.js" />
     <Content Include="js\ProductDetail.js" />
@@ -100,6 +103,13 @@
     </Compile>
     <Compile Include="CheckoutPage.aspx.designer.cs">
       <DependentUpon>CheckoutPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.Master.cs">
       <DependentUpon>Index.Master</DependentUpon>

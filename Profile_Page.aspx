@@ -6,8 +6,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-
-
     <div class="profile_page_container">
         <div class="card bg-secondary shadow">
             <div class="card-header bg-white border-0">
@@ -183,5 +181,5 @@ A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea
     </div>
 
 
-
+    <script> document.title = "Profile";</script>
 </asp:Content>

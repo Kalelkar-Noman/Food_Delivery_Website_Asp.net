@@ -1,24 +1,6 @@
-﻿/* Import Google font - Poppins */
-/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");*/
-
-/** {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}*/
-
-/*body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: rgb(130, 106, 251);
-}*/
-
+﻿
 .signup_container {
-  margin-top: 90px;
+  /*margin-top: 90px;*/
   min-height: 100vh;
   display: flex;
   align-items: center;

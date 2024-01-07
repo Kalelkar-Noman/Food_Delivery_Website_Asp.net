@@ -1,4 +1,6 @@
-﻿// Select elements for efficient access
+﻿////document.title = "HomePage";
+
+// Select elements for efficient access
 const carouselItems = document.querySelector(".carousel-items");
 const carouselNextButton = document.querySelector(".carousel-next");
 const carouselPrevButton = document.querySelector(".carousel-prev");
