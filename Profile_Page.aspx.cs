@@ -15,12 +15,31 @@ namespace Food_Delivery_Website
         protected void Page_Load(object sender, EventArgs e)
         {
             Save.Visible = false;
-            HttpCookie cookie = Request.Cookies["user_id"];
 
+            HttpCookie cookie = Request.Cookies["user_id"];
+            string cookieValue = cookie.Value;
+            //SqlCommand cmd = new SqlCommand("select * from Users where Id='" + cookieValue + "'", con);
+            ////SqlCommand cmd = new SqlCommand("select * from Items where item_category like '"+productCategory+"'", con);
+            //try
+            //{
+            //    con.Open();
+            //    Repeater1.DataSource = cmd.ExecuteReader();
+            //    Repeater1.DataBind();
+
+            //}
+            //catch (Exception ee)
+            //{
+            //    ScriptManager.RegisterStartupScript(Page, this.GetType(), "alert", "alert('OOPs, something went wrong''" + ee.Message + "' );", true);
+            //}
+            //finally
+            //{
+            //    con.Close();
+            //}
+            //string cookieValue = cookie.Value;
             if (cookie != null)
             {
-                string cookieValue = cookie.Value;
-                SqlCommand cmd = new SqlCommand("select * from Users where id='"+cookieValue+"'", con);
+
+                SqlCommand cmd = new SqlCommand("select * from Users where id='" + cookieValue + "'", con);
                 try
                 {
                     con.Open();
@@ -28,7 +47,7 @@ namespace Food_Delivery_Website
                     if (dr.HasRows)
                     {
                         dr.Read();
-                        input_address.Text = dr["user_address"].ToString();
+                        Input_address.Text = dr["user_address"].ToString();
                         Input_city.Text = dr["user_city"].ToString();
                         Input_country.Text = dr["user_country"].ToString();
                         Input_email.Text = dr["user_email"].ToString();
@@ -41,6 +60,7 @@ namespace Food_Delivery_Website
                 }
                 catch (Exception ee)
                 {
+                    //  Response.Write(ee.Message);
                     ScriptManager.RegisterStartupScript(Page, this.GetType(), "alert", "alert('OOPs, something went wrong''" + ee.Message + "' );", true);
                 }
                 finally
@@ -52,29 +72,34 @@ namespace Food_Delivery_Website
             {
                 Response.Redirect("Main_Page.aspx");
             }
+
+
+
+
         }
 
         protected void Edit_Click(object sender, EventArgs e)
         {
             Save.Visible = true;
-           
+
         }
 
         protected void Save_Click(object sender, EventArgs e)
         {
             HttpCookie cookie = Request.Cookies["user_id"];
             string cookieValue = cookie.Value;
-            SqlCommand cmd = new SqlCommand("update Users set user_name='" + Input_name.Text + "',user_address='" + input_address.Text + "',user_number='" + Input_number.Text + "',user_state='" + Input_state.Text + "',user_country='" + Input_country.Text + "',user_email='" + Input_email.Text + "',user_pincode='" + Input_pincode.Text + "',user_password='" + Input_password.Text + "',user_city='" + Input_city.Text + "' where Id='" + cookieValue + "'", con);
 
-
+           
             try
             {
+                SqlCommand cmd = new SqlCommand("update Users set user_name='" + Input_name.Text + "',user_address='" + Input_address.Text + "',user_number='" + Input_number.Text + "',user_state='" + Input_state.Text + "',user_country='" + Input_country.Text + "',user_email='" + Input_email.Text + "',user_pincode='" + Input_pincode.Text + "',user_password='" + Input_password.Text + "',user_city='" + Input_city.Text + "' where Id='" + cookieValue + "'", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
-                Response.Write("update Users set user_name='" + Input_name.Text + "',user_address='" + input_address.Text + "',user_number='" + Input_number.Text + "',user_state='" + Input_state.Text + "',user_country='" + Input_country.Text + "',user_email='" + Input_email.Text + "',user_pincode='" + Input_pincode.Text + "',user_password='" + Input_password.Text + "',user_city='" + Input_city.Text + "' where Id='" + cookieValue + "'");
+                Response.Write("update Users set user_name='" + Input_name.Text + "',user_address='" + Input_address.Text + "',user_number='" + Input_number.Text + "',user_state='" + Input_state.Text + "',user_country='" + Input_country.Text + "',user_email='" + Input_email.Text + "',user_pincode='" + Input_pincode.Text + "',user_password='" + Input_password.Text + "',user_city='" + Input_city.Text + "' where Id='" + cookieValue + "'");
             }
             catch (Exception ee)
             {
+                //Response.Write(ee.Message);
                 ScriptManager.RegisterStartupScript(Page, this.GetType(), "alert", "alert('OOPs, something went wrong''" + ee.Message + "' );", true);
             }
             finally

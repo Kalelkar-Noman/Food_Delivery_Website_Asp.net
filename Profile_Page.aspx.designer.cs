@@ -69,13 +69,13 @@ namespace Food_Delivery_Website
         protected global::System.Web.UI.WebControls.TextBox Input_password;
 
         /// <summary>
-        /// input_address control.
+        /// Input_address control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox input_address;
+        protected global::System.Web.UI.WebControls.TextBox Input_address;
 
         /// <summary>
         /// Input_city control.
