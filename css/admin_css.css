@@ -1,60 +1,62 @@
 ﻿#admin_container {
-    margin-top: 100px;
-    padding: 0 3rem;
+  margin-top: 100px;
+  padding: 0 3rem;
 }
-    #admin_container input[type="text"], #admin_container input[type="number"] {
-        height: 50px;
-        width: 100%;
-        outline: none;
-        font-size: 1rem;
-        color: #707070;
-        margin-top: 8px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        padding: 0 15px;
-    }
-.admin_input_conatiner{
-    display:flex;
-    flex-direction:column;
+#admin_container input[type="text"],
+#admin_container input[type="number"] {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.admin_input_conatiner {
+  display: flex;
+  flex-direction: column;
 }
 .admin_img_preview {
-    display: flex;
-    /* align-content: center; */
-    justify-content: center;
-    align-items: center;
-    margin-bottom:8px;
+  display: flex;
+  /* align-content: center; */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
 }
 .admin_img_preview > img {
-    display: block;
-    max-width: 500px;
-    width: calc(100vw - 5rem);
+  display: block;
+  max-width: 500px;
+  width: calc(100vw - 5rem);
 }
 .admin_button_container {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin: 8px 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 8px 0;
 }
-    .admin_button_container input[type="submit"] {
-        display: inline-block;
-        background-color: var(--first-color);
-        width: 100%;
-        /* max-width: 200px; */
-        min-width: max-content;
-        color: #fff;
-        font-weight: var(--font-semi-bold);
-        padding: 1rem;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        transition: box-shadow 0.4s;
-        flex: 1 0;
-    }
-#ContentPlaceHolder1_GridView1, admin_preview > div {
-    width: 100%;
+.admin_button_container input[type="submit"] {
+  display: inline-block;
+  background-color: var(--first-color);
+  width: 100%;
+  /* max-width: 200px; */
+  min-width: max-content;
+  color: #fff;
+  font-weight: var(--font-semi-bold);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: box-shadow 0.4s;
+  flex: 1 0;
+}
+#ContentPlaceHolder1_GridView1,
+admin_preview > div {
+  width: 100%;
 }
 #ContentPlaceHolder1_GridView1 * {
-        text-align: center;
-    }
-#ContentPlaceHolder1_GridView1 td{
-    width:16.66%;
+  text-align: center;
+}
+#ContentPlaceHolder1_GridView1 td {
+  width: 16.66%;
 }

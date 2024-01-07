@@ -29,12 +29,11 @@ namespace Food_Delivery_Website
         protected void Submit_form_Click(object sender, EventArgs e)
         {
             HttpCookie cookie = Request.Cookies["user_otp"];
-            if (cookie != null)
+            HttpCookie loginstatus = Request.Cookies["loginstatus"];
+            if (cookie != null && (loginstatus.ToString()!="false" || loginstatus ==null ) )
             {
                 //Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "alertScript", "alert('This alert is triggered from server-side code.');", true);
-                int cookieValue = Convert.ToInt32(cookie.Value);
-                Response.Write(cookieValue);
-
+                int cookieValue = Convert.ToInt32(cookie.Value);           
                 if (cookieValue == Convert.ToInt32(Otp_inputbox.Text))
                 {
                     Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "alertScript", "alert('successfull login.');", true);
@@ -52,7 +51,12 @@ namespace Food_Delivery_Website
                     finally
                     {
                         con.Close();
+                        HttpCookie Logincookie = new HttpCookie("login");
+                        cookie.Value = "true";
+                        cookie.Expires = DateTime.Now.AddDays(7); // Set expiration to 7 days from now
+                        Response.Cookies.Add(cookie);
                     }
+                    
                     Response.Redirect("Main_Page.aspx");
                 }
                 else
@@ -63,7 +67,7 @@ namespace Food_Delivery_Website
             }
             else
             {
-                Response.Write("cookie not found");
+                Response.Redirect("Main_Page.aspx");
             }
         }
     }

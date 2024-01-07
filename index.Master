@@ -33,7 +33,7 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="Admin.aspx" class="nav__link">Administration</a>
+                            <a href="Admin.aspx" id="AdminPage" class="nav__link">Administration</a>
                         </li>
 
                         <li class="nav__item">
@@ -52,7 +52,7 @@
                     <i class="ri-search-line nav__search" id="search-btn"></i>
 
                     <!-- Login button -->
-                    <i class="ri-user-line nav__login" id="login-btn"></i>
+                    <a href="Profile_Page.aspx" class="ri-user-line nav__login" id="login-btn"></a>
 
                     <!-- Toggle button -->
                     <div class="nav__toggle" id="nav-toggle">

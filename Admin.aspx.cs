@@ -62,7 +62,8 @@ namespace Food_Delivery_Website
         {
             string originalFilename = Path.GetFileName(Item_image.FileName);
             string extension = Path.GetExtension(originalFilename);
-            string newFilename = "image-" + Guid.NewGuid().ToString() + extension;
+            //string newFilename = "image_" + Guid.NewGuid().ToString() + extension;
+            string newFilename = $"image_{Guid.NewGuid()}{extension}";
             string filepath = Server.MapPath("~/UploadedImages/ ") + newFilename;
             Item_image.SaveAs(filepath);
             Querier("INSERT INTO Items(item_name,item_price,item_image,item_category,item_description) Values('" + Item_name.Text + "','" + Item_price.Text + "','" + newFilename + "','" + Item_category.Text + "','"+Item_description.Text+"')");

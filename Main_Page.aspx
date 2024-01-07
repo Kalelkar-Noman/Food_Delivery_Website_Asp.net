@@ -48,9 +48,11 @@
             <ItemTemplate>
                  <div class="product-card">
             <div class="badge">Hot</div>
-            <div class="product-tumb">
+     <asp:HyperLink CssClass="product-tumb" ID="Link_to_Details" NavigateUrl='<%# "~/Product_Details.aspx?ProductId=" + DataBinder.Eval(Container, "DataItem.item_id") %>' runat="server">
+            <%--<div class="product-tumb">--%>
                 <img src="./UploadedImages/<%#DataBinder.Eval(Container,"DataItem.item_image")%>" alt="" />
-            </div>
+            <%--</div>--%>
+         </asp:HyperLink>
             <div class="product-details">
                 <span class="product-catagory"><%#DataBinder.Eval(Container,"DataItem.item_category")%></span>
                 <h4><a href="#"><%#DataBinder.Eval(Container,"DataItem.item_name")%></a></h4>

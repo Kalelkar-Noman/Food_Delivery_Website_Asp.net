@@ -18,164 +18,169 @@
 }*/
 
 .signup_container {
-    margin-top: 90px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    /*background: rgb(130, 106, 251);*/
-    background: #bbbab9;
+  margin-top: 90px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  /*background: rgb(130, 106, 251);*/
+  background: #bbbab9;
 }
 .signup_inner_container {
-    /*position: relative;*/
-   /* z-index:10;*/
-    max-width: 700px;
-    width: 100%;
-    background: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  /*position: relative;*/
+  /* z-index:10;*/
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-    .signup_inner_container header {
-        font-size: 1.5rem;
-        color: #333;
-        font-weight: 500;
-        text-align: center;
-    }
+.signup_inner_container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
 
-    .signup_inner_container .form {
-        margin-top: 30px;
-    }
+.signup_inner_container .form {
+  margin-top: 30px;
+}
 
 .form .input-box {
-    width: 100%;
-    margin-top: 20px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .input-box label {
-    color: #333;
+  color: #333;
 }
 .form .input-box input,
 .form .select-box {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    outline: none;
-    font-size: 1rem;
-    color: #707070;
-    margin-top: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 0 15px;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
 }
 
 .input-box input:focus {
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .form .column {
-    display: flex;
-    column-gap: 15px;
+  display: flex;
+  column-gap: 15px;
 }
 
 .form .gender-box {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .gender-box h3 {
-    color: #333;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 8px;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
 }
-.form .gender-option,.form .gender{
-    display: flex;
-    align-items: center;
-    column-gap: 50px;
-    flex-wrap: wrap;
+.form .gender-option,
+.form .gender {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
 }
 
 .form .gender {
-    column-gap: 5px;
+  column-gap: 5px;
 }
 
 .gender input {
-    accent-color: rgb(130, 106, 251);
+  accent-color: rgb(130, 106, 251);
 }
 
-.form .gender input,.form .gender label {
-    cursor: pointer;
+.form .gender input,
+.form .gender label {
+  cursor: pointer;
 }
 
 .gender label {
-    color: #707070;
+  color: #707070;
 }
 
-.address input,.address .select-box {
-    margin-top: 15px;
+.address input,
+.address .select-box {
+  margin-top: 15px;
 }
 
 .select-box select {
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    color: #707070;
-    font-size: 1rem;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
 }
 
-.form button, .form .submit_btn {
-    height: 55px;
-    width: 100%;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 30px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background: rgb(130, 106, 251);
+.form button,
+.form .submit_btn {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
 }
 
-    .form button:hover{
+.form button:hover, .submit_btn:hover{
         background: rgb(88, 56, 250);
-    }
+}
 /*Responsive*/
 @media screen and (max-width: 500px) {
-    .form .column {
-        flex-wrap: wrap;
-    }
+  .form .column {
+    flex-wrap: wrap;
+  }
 
-    .form .gender-option,.form .gender{
-        row-gap: 15px;
-    }
+  .form .gender-option,
+  .form .gender {
+    row-gap: 15px;
+  }
 }
-.otp-div{
-    display:grid;
-    grid-template-columns:30% auto;
-    grid-gap:15px;
+.otp-div {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-gap: 15px;
 }
 .otp-div #otp_btn {
-        /*  color: #fff;
+  /*  color: #fff;
         font-size: 1rem;
         font-weight: 400;
         border: none;
         cursor: pointer;
         transition: all 0.2s ease;
         background: rgb(130, 106, 251);*/
-        height: 55px;
-        width: 100%;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 400;
-        /* margin-top: 30px; */
-        border: none;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        background: rgb(130, 106, 251);
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  /* margin-top: 30px; */
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
 }
 .otp-div #otp_btn:hover {
-            background: rgb(88, 56, 250);
+  background: rgb(88, 56, 250);
 }

@@ -12,55 +12,55 @@ carouselPrevButton.style.visibility = "hidden";
 
 // Handle next button click:
 carouselNextButton.addEventListener("click", () => {
-    const itemWidth = carouselItems.querySelector(".inner-con").offsetWidth;
-    currentScrollLeft += itemWidth;
+  const itemWidth = carouselItems.querySelector(".inner-con").offsetWidth;
+  currentScrollLeft += itemWidth;
 
-    // Limit scrolling to prevent empty space
-    const maxScrollLeft = carouselItems.scrollWidth - carouselItems.clientWidth;
-    currentScrollLeft = Math.min(currentScrollLeft, maxScrollLeft);
+  // Limit scrolling to prevent empty space
+  const maxScrollLeft = carouselItems.scrollWidth - carouselItems.clientWidth;
+  currentScrollLeft = Math.min(currentScrollLeft, maxScrollLeft);
 
-    carouselItems.scrollTo({
-        left: currentScrollLeft,
-        behavior: "smooth", // Enable smooth scrolling
-    });
+  carouselItems.scrollTo({
+    left: currentScrollLeft,
+    behavior: "smooth", // Enable smooth scrolling
+  });
 
-    // Show prev button after next button click
-    prevButtonVisible = true;
-    carouselPrevButton.style.visibility = "visible";
+  // Show prev button after next button click
+  prevButtonVisible = true;
+  carouselPrevButton.style.visibility = "visible";
 });
 
 // Handle prev button click:
 carouselPrevButton.addEventListener("click", () => {
-    const itemWidth = carouselItems.querySelector(".inner-con").offsetWidth;
-    currentScrollLeft -= itemWidth;
+  const itemWidth = carouselItems.querySelector(".inner-con").offsetWidth;
+  currentScrollLeft -= itemWidth;
 
-    // Limit scrolling to prevent going beyond the start
-    currentScrollLeft = Math.max(currentScrollLeft, 0);
+  // Limit scrolling to prevent going beyond the start
+  currentScrollLeft = Math.max(currentScrollLeft, 0);
 
-    carouselItems.scrollTo({
-        left: currentScrollLeft,
-        behavior: "smooth",
-    });
+  carouselItems.scrollTo({
+    left: currentScrollLeft,
+    behavior: "smooth",
+  });
 
-    // Hide prev button if scrolled back to start
-    if (currentScrollLeft === 0) {
-        prevButtonVisible = false;
-        carouselPrevButton.style.visibility = "hidden";
-    }
+  // Hide prev button if scrolled back to start
+  if (currentScrollLeft === 0) {
+    prevButtonVisible = false;
+    carouselPrevButton.style.visibility = "hidden";
+  }
 });
 //
 const cartbutton = document.getElementById("cart-button");
 const cartclosebutton = document.getElementById("cart-close");
 cartclosebutton.addEventListener("click", () => {
-    console.log("clicking");
-    document.getElementById("mySidepanel").classList.toggle("active");
-    console.log("clicked");
+  //console.log("clicking");
+  document.getElementById("mySidepanel").classList.toggle("active");
+  //console.log("clicked");
 });
 cartbutton.addEventListener("click", (event) => {
-    event.preventDefault();
-    console.log("clicking");
-    document.getElementById("mySidepanel").classList.toggle("active");
-    console.log("clicked");
+  event.preventDefault();
+  //console.log("clicking");
+  document.getElementById("mySidepanel").classList.toggle("active");
+  //console.log("clicked");
 });
 /*
 function toggleNav() {
@@ -75,35 +75,35 @@ const plusBtn = document.querySelector(".plus-btn");
 
 // Decrement quantity
 minusBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    let currentQuantity = parseInt(quantityInput.value);
-    if (currentQuantity > 1) {
-        quantityInput.value = currentQuantity - 1;
-    }
+  event.preventDefault();
+  let currentQuantity = parseInt(quantityInput.value);
+  if (currentQuantity > 1) {
+    quantityInput.value = currentQuantity - 1;
+  }
 });
 
 // Increment quantity
 plusBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    let currentQuantity = parseInt(quantityInput.value);
-    quantityInput.value = currentQuantity + 1;
+  event.preventDefault();
+  let currentQuantity = parseInt(quantityInput.value);
+  quantityInput.value = currentQuantity + 1;
 });
 
 window.onload = function () {
-    const elems = document.querySelectorAll(".category_icon");
-    elems.forEach((element) => {
-        switch (element.textContent) {
-            case "sushi":
-                element.innerHTML = "🍣";
-                break;
-            case "burger":
-                element.innerHTML = "🍔";
-                break;
-            case "pizza":
-                element.innerHTML = "🍕";
-                break;
-        }
-    });
+  const elems = document.querySelectorAll(".category_icon");
+  elems.forEach((element) => {
+    switch (element.textContent) {
+      case "sushi":
+        element.innerHTML = "🍣";
+        break;
+      case "burger":
+        element.innerHTML = "🍔";
+        break;
+      case "pizza":
+        element.innerHTML = "🍕";
+        break;
+    }
+  });
 };
 //function inner() {
 //    const innerConLinks = document.querySelectorAll('.inner-con');
