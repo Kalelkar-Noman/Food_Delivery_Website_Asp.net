@@ -17,7 +17,7 @@ namespace Food_Delivery_Website
             Save.Visible = false;
 
             HttpCookie cookie = Request.Cookies["user_id"];
-            string cookieValue = cookie.Value;
+           
             //SqlCommand cmd = new SqlCommand("select * from Users where Id='" + cookieValue + "'", con);
             ////SqlCommand cmd = new SqlCommand("select * from Items where item_category like '"+productCategory+"'", con);
             //try
@@ -38,7 +38,7 @@ namespace Food_Delivery_Website
             //string cookieValue = cookie.Value;
             if (cookie != null)
             {
-
+                string cookieValue = cookie.Value;
                 SqlCommand cmd = new SqlCommand("select * from Users where id='" + cookieValue + "'", con);
                 try
                 {
@@ -87,11 +87,10 @@ namespace Food_Delivery_Website
         protected void Save_Click(object sender, EventArgs e)
         {
             HttpCookie cookie = Request.Cookies["user_id"];
-            string cookieValue = cookie.Value;
 
-           
             try
             {
+                string cookieValue = cookie.Value;
                 SqlCommand cmd = new SqlCommand("update Users set user_name='" + Input_name.Text + "',user_address='" + Input_address.Text + "',user_number='" + Input_number.Text + "',user_state='" + Input_state.Text + "',user_country='" + Input_country.Text + "',user_email='" + Input_email.Text + "',user_pincode='" + Input_pincode.Text + "',user_password='" + Input_password.Text + "',user_city='" + Input_city.Text + "' where Id='" + cookieValue + "'", con);
                 con.Open();
                 cmd.ExecuteNonQuery();

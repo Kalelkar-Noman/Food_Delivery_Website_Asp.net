@@ -48,20 +48,13 @@ namespace Food_Delivery_Website
                         //ScriptManager.RegisterStartupScript(Page, this.GetType(), "alert", "alert('OOPs, something went wrong''" + e.Message + "' );", true);
                         Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "alertScript", "alert('OOPs, something went wrong''" + ee.Message + "');", true);
                     }
-                    finally
-                    {
-                        con.Close();
-                        HttpCookie Logincookie = new HttpCookie("login");
-                        cookie.Value = "true";
-                        cookie.Expires = DateTime.Now.AddDays(7); // Set expiration to 7 days from now
-                        Response.Cookies.Add(cookie);
-                    }
+                    
                     
                     Response.Redirect("Main_Page.aspx");
                 }
                 else
                 {
-                    Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "alertScript", "alert('Failed login.');", true);
+                    Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "alertScript", "alert('Failed Signup.');", true);
                 }
 
             }

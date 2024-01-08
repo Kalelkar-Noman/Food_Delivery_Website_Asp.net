@@ -56,10 +56,10 @@ namespace Food_Delivery_Website
         protected void Page_Load(object sender, EventArgs e)
         {
             HttpCookie cookie = Request.Cookies["user_id"];
-            string cookieValue = cookie.Value;
+            
             if (cookie != null)
             {
-
+                string cookieValue = cookie.Value;
                 SqlCommand cmd = new SqlCommand("select * from Users where id='" + cookieValue + "'", con);
                 try
                 {
@@ -68,7 +68,7 @@ namespace Food_Delivery_Website
                     if (dr.HasRows)
                     {
                         dr.Read();
-                        if (dr["user_access"].ToString() == "admin")
+                        if (dr["user_access"].ToString() == "Admin")
                         {
                             Refresher("select * from Items");
                         }
