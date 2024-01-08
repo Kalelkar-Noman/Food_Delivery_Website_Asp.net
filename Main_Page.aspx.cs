@@ -15,8 +15,7 @@ namespace Food_Delivery_Website
         //readonly SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\KNA\\Documents\\Projects_College\\Food_Delivery_Website\\DB\\Food_Delivery.mdf;Integrated Security=True;Connect Timeout=30");
         readonly SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Food_DeliveryConnectionString"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
-        {
-            
+        {          
             SqlCommand cmd = new SqlCommand("select distinct item_category from Items", con);
             try
             {
@@ -33,6 +32,7 @@ namespace Food_Delivery_Website
             {
                 con.Close();
             }
+
             try {
                 cmd = new SqlCommand("select * from Items", con);
                 con.Open();

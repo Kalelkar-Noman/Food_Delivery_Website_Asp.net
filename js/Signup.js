@@ -7,7 +7,7 @@ otpbtn.addEventListener("click", () => {
   }
   document.cookie = `user_otp=${otp}; expires=Fri, 31 Dec 2034 23:59:59 GMT`;
   console.log(otp);
-    //sendmail(otp);
+    sendmail(otp);
     console.log("otp sent");
 });
 function sendmail(otp) {
@@ -16,7 +16,7 @@ function sendmail(otp) {
   })();
   var params = {
     sendername: "ashish",
-    to: "kalelkarnoman014@gmail.com",
+      to: "ashish73737447@gmail.com",
     subject: "project testing message",
     replyto: "dont reply",
     message:

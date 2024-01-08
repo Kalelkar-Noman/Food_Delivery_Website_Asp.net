@@ -31,7 +31,7 @@
               </div>
               <div class="app-form-group buttons">
                 <%--<button class="app-form-button">CANCEL</button>--%>
-                <button class="app-form-button" id="contactmail">SEND</button>
+                <button type="submit" class="app-form-button"  id="contactmail">SEND</button>
               </div>
             </div>
           </div>
@@ -40,5 +40,6 @@
     
     </div>
   </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="js/contactus.js"></script>
 </asp:Content>
