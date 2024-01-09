@@ -10,7 +10,7 @@ function sendmail() {
     })();
     var params = {
         sendername: "ashish",
-        to: "ashish73737447@gmail.com",
+        to: "kalelkarnoman014@gmail.com",
         subject: "project contact",
         replyto: "dont reply",
         message:
