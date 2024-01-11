@@ -81,6 +81,7 @@
     <Content Include="DB\Food_Delivery_log.ldf" />
     <Content Include="DB\SQl.txt" />
     <Content Include="Img\logo.jpg" />
+    <Content Include="Img\pizza.png" />
     <Content Include="js\admin_page.js" />
     <Content Include="js\contactus.js" />
     <Content Include="js\index.js" />

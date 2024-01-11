@@ -2,12 +2,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/mainpage.css" rel="stylesheet" />
-  
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%-- main --%>
-    <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
-    <%--<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional"><ContentTemplate>--%>
+
     <div class="mainpage-container headergap">
         <div class="carousel-prev">
             <div class="carousel-arrow"><</div>
@@ -16,23 +15,20 @@
             <div class="carousel-arrow">></div>
         </div>
         <div class="carousel-items">
-            <%--<div class="inner-con">
-                <div class="menu-scroller"><span class="category_icon">All</span></div>
-                <p class="mybtn">All</p>
-            </div>--%>
+
             <asp:LinkButton ID="Inner_Menu" runat="server" CssClass="inner-con inner-con-active" CommandArgument="%%" OnClick="Inner_Menu_Click">  
                         <div class="menu-scroller"><span class="category_icon">All</span></div>
                         <p class="mybtn">All</p>
-                      </asp:LinkButton>
+            </asp:LinkButton>
             <asp:Repeater ID="Repeater1" runat="server">
                 <ItemTemplate>
                     <%--<div class="inner-con" >--%>
-                    <asp:LinkButton ID="Inner_Menu" runat="server" CssClass="inner-con" CommandArgument=<%#DataBinder.Eval(Container,"DataItem.item_category")%> OnClick="Inner_Menu_Click" >
+                    <asp:LinkButton ID="Inner_Menu" runat="server" CssClass="inner-con" CommandArgument='<%#DataBinder.Eval(Container,"DataItem.item_category")%>' OnClick="Inner_Menu_Click">
      
                         <div class="menu-scroller"><span class="category_icon"><%#DataBinder.Eval(Container,"DataItem.item_category")%></span></div>
                         <p class="mybtn"><%#DataBinder.Eval(Container,"DataItem.item_category")%></p>
                            
-                      </asp:LinkButton>
+                    </asp:LinkButton>
                     <%--</div>--%>
                 </ItemTemplate>
 
@@ -42,32 +38,32 @@
         </div>
     </div>
     <div class="product-cards">
-       
-         
+
+
         <asp:Repeater ID="Repeater2" runat="server">
             <ItemTemplate>
-                 <div class="product-card">
-            <div class="badge">Hot</div>
-     <asp:HyperLink CssClass="product-tumb" ID="Link_to_Details" NavigateUrl='<%# "~/Product_Details.aspx?ProductId=" + DataBinder.Eval(Container, "DataItem.item_id") %>' runat="server">
+                <div class="product-card">
+                    <div class="badge">Hot</div>
+                    <asp:HyperLink CssClass="product-tumb" ID="Link_to_Details" NavigateUrl='<%# "~/Product_Details.aspx?ProductId=" + DataBinder.Eval(Container, "DataItem.item_id") %>' runat="server">
             <%--<div class="product-tumb">--%>
                 <img src="./UploadedImages/<%#DataBinder.Eval(Container,"DataItem.item_image")%>" alt="" />
             <%--</div>--%>
-         </asp:HyperLink>
-            <div class="product-details">
-                <span class="product-catagory"><%#DataBinder.Eval(Container,"DataItem.item_category")%></span>
-                <h4><a href="#"><%#DataBinder.Eval(Container,"DataItem.item_name")%></a></h4>
-                <p>
-                    <%#DataBinder.Eval(Container,"DataItem.item_description")%>
-                </p>
-                <div class="product-bottom-details">
-                    <div class="product-price"><small>$96.00</small>$<%#DataBinder.Eval(Container,"DataItem.item_price")%></div>
-                    <div class="product-links">
-                       
-                        <a href="#"><i class="ri-shopping-cart-fill"></i></a>
+                    </asp:HyperLink>
+                    <div class="product-details">
+                        <span class="product-catagory"><%#DataBinder.Eval(Container,"DataItem.item_category")%></span>
+                        <h4><a href="#"><%#DataBinder.Eval(Container,"DataItem.item_name")%></a></h4>
+                        <p>
+                            <%#DataBinder.Eval(Container,"DataItem.item_description")%>
+                        </p>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>$96.00</small>$<%#DataBinder.Eval(Container,"DataItem.item_price")%></div>
+                            <div class="product-links">
+
+                                <a href="#"><i class="ri-shopping-cart-fill"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
             </ItemTemplate>
         </asp:Repeater>
     </div>
@@ -93,7 +89,7 @@
         <div class="cart-item">
             <h3>Product Name</h3>
             <div class="cart-side-panel">
-                <img src="/img/logo.jpg" alt="Product Image" />
+                <img src="/img/pizza.png" alt="Product Image" />
                 <div class="sidepanel-quantity-price">
                     <p class="price">$19.99</p>
                     <div class="quantity">
@@ -106,8 +102,7 @@
         </div>
         <!--  -->
     </div>
-        <%--</ContentTemplate> <Triggers>  <asp:AsyncPostBackTrigger ControlID="Inner_Menu" EventName="OnClick" /></Triggers></asp:UpdatePanel>--%>
-    <%--  --%>
+
     <%-- main --%>
     <script src="js/mainpage.js"> </script>
     <script> document.title = "HomePage";</script>

@@ -1,18 +1,21 @@
 ﻿.background {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    min-height: 100vh;
+    min-height: 100vh
 }
 
 .contactus_container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 700px;
     flex: 0 1 700px;
     margin: auto;
-    padding: 10px;
+    padding: 10px
 }
 
 .screen {
     position: relative;
-    /*background: #3e3e3e;*/
-    border-radius: 15px;
+    border-radius: 15px
 }
 
     .screen:after {
@@ -24,31 +27,44 @@
         right: 20px;
         bottom: 0;
         border-radius: 15px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-        z-index: -1;
+        -webkit-box-shadow: 0 20px 40px rgba(0,0,0,.4);
+        box-shadow: 0 20px 40px rgba(0,0,0,.4);
+        z-index: -1
     }
 
-
 .screen-body {
-    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
 }
 
 .screen-body-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
-    padding: 50px;
+    padding: 50px
 }
 
     .screen-body-item.left {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
     }
 
 .app-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-    /*color: #ea1d6f;*/
-    font-size: 26px;
+    font-size: 26px
 }
 
     .app-title:after {
@@ -59,26 +75,25 @@
         bottom: -10px;
         width: 25px;
         height: 4px;
-        background: #ea1d6f;
+        background: #ea1d6f
     }
 
 .app-contact {
     margin-top: auto;
-    font-size: 8px;
-    /*color: #888;*/
+    font-size: 8px
 }
 
 .app-form-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
     .app-form-group.message {
-        margin-top: 40px;
+        margin-top: 40px
     }
 
     .app-form-group.buttons {
         margin-bottom: 0;
-        text-align: right;
+        text-align: right
     }
 
 .app-form-control {
@@ -87,63 +102,84 @@
     background: none;
     border: none;
     border-bottom: 1px solid #666;
-    /*color: #ddd;*/
     font-size: 14px;
     text-transform: uppercase;
     outline: none;
-    transition: border-color .2s;
+    -webkit-transition: border-color .2s;
+    -o-transition: border-color .2s;
+    transition: border-color .2s
 }
 
+    .app-form-control::-webkit-input-placeholder {
+        color: #666
+    }
+
+    .app-form-control::-moz-placeholder {
+        color: #666
+    }
+
+    .app-form-control:-ms-input-placeholder {
+        color: #666
+    }
+
+    .app-form-control::-ms-input-placeholder {
+        color: #666
+    }
+
     .app-form-control::placeholder {
-        color: #666;
+        color: #666
     }
 
     .app-form-control:focus {
-        border-bottom-color: #ddd;
+        border-bottom-color: #ddd
     }
 
 .app-form-button {
     background: none;
     border: none;
-    /*color: #ea1d6f;*/
     font-size: 14px;
     cursor: pointer;
-    outline: none;
+    outline: none
 }
 
     .app-form-button:hover {
-        color: #b9134f;
+        color: #b9134f
     }
 
-
-@media screen and (max-width: 520px) {
+@media screen and (max-width:520px) {
     .screen-body {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
     }
 
     .screen-body-item.left {
-        margin-bottom: 30px;
+        margin-bottom: 30px
     }
 
     .app-title {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row
     }
 
         .app-title span {
-            margin-right: 12px;
+            margin-right: 12px
         }
 
         .app-title:after {
-            display: none;
+            display: none
         }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:600px) {
     .screen-body {
-        padding: 40px;
+        padding: 40px
     }
 
     .screen-body-item {
-        padding: 0;
+        padding: 0
     }
 }

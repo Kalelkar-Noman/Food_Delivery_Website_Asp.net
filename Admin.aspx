@@ -6,21 +6,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="admin_container" class="headergap">
         <div class="admin_input_conatiner">
-           <div class="admin_img_preview">
+            <div class="admin_img_preview">
                 <asp:Image ID="Image_preview" runat="server" />
-           </div>
+            </div>
             <asp:FileUpload ID="Item_image" runat="server" />
             <asp:TextBox ID="Item_id" type="number" placeholder="Id : dont't enter when inserting" runat="server"></asp:TextBox>
             <asp:TextBox ID="Item_name" type="text" placeholder="Enter Product Name" runat="server"></asp:TextBox>
             <asp:TextBox ID="Item_price" type="number" placeholder="Enter Product Price" runat="server"></asp:TextBox>
             <asp:TextBox ID="Item_category" type="text" placeholder="Enter Product Category" runat="server"></asp:TextBox>
             <asp:TextBox ID="Item_description" type="text" placeholder="Enter Product description" runat="server"></asp:TextBox>
-         <div class="admin_button_container">
-             <asp:Button ID="admin_add_submit" runat="server" Text="Add" OnClick="Admin_add_submit_Click" />
-             <asp:Button ID="admin_update_submit" runat="server" Text="Update" OnClick="Admin_update_submit_Click" />
-             <asp:Button ID="admin_search_submit" runat="server" Text="Search" OnClick="Admin_search_submit_Click" />
-             <asp:Button ID="admin_delete_submit" runat="server" Text="Delete" Onclick="Admin_delete_submit_Click" />
-         </div>  
+            <div class="admin_button_container">
+                <asp:Button ID="admin_add_submit" runat="server" Text="Add" OnClick="Admin_add_submit_Click" />
+                <asp:Button ID="admin_update_submit" runat="server" Text="Update" OnClick="Admin_update_submit_Click" />
+                <asp:Button ID="admin_search_submit" runat="server" Text="Search" OnClick="Admin_search_submit_Click" />
+                <asp:Button ID="admin_delete_submit" runat="server" Text="Delete" OnClick="Admin_delete_submit_Click" />
+            </div>
 
         </div>
         <div class="admin_preview">
@@ -39,7 +39,7 @@
             </asp:GridView>
         </div>
     </div>
-  <%--  --%>
+    <%--  --%>
     <script src="js/admin_page.js"></script>
     <script> document.title = "Admin Page";</script>
 </asp:Content>
