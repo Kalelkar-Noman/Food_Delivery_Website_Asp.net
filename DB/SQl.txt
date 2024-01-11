@@ -1,0 +1,26 @@
+﻿create database Food_Delivery;
+
+CREATE TABLE [dbo].[Items] (
+    [item_id]          INT           IDENTITY (1, 1) NOT NULL,
+    [item_name]        VARCHAR (MAX) NOT NULL,
+    [item_price]       INT           NOT NULL,
+    [item_image]       VARCHAR (MAX) NOT NULL,
+    [item_category]    VARCHAR (MAX) NOT NULL,
+    [item_description] VARCHAR (MAX) NOT NULL,
+    PRIMARY KEY CLUSTERED ([item_id] ASC)
+);
+
+CREATE TABLE [dbo].[Users] (
+    [Id]            INT           IDENTITY (1, 1) NOT NULL,
+    [user_name]     VARCHAR (MAX) NOT NULL,
+    [user_access]   VARCHAR (50)  DEFAULT ('normal') NULL,
+    [user_address]  VARCHAR (MAX) NOT NULL,
+    [user_number]   INT           NOT NULL,
+    [user_state]    VARCHAR (50)  NULL,
+    [user_country]  VARCHAR (50)  NULL,
+    [user_email]    VARCHAR (MAX) NOT NULL,
+    [user_pincode]  INT           NULL,
+    [user_password] VARCHAR (MAX) NOT NULL,
+    [user_city]     VARCHAR (50)  NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);

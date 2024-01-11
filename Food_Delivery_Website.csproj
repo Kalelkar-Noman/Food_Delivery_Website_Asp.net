@@ -78,11 +78,9 @@
     <Content Include="css\Profile_page.css" />
     <Content Include="css\signup.css" />
     <Content Include="DB\Food_Delivery.mdf" />
-    <Content Include="DB\Food_Delivery_log.ldf">
-      <DependentUpon>Food_Delivery.mdf</DependentUpon>
-    </Content>
+    <Content Include="DB\Food_Delivery_log.ldf" />
+    <Content Include="DB\SQl.txt" />
     <Content Include="Img\logo.jpg" />
-    <Content Include="Img\pizza.png" />
     <Content Include="js\admin_page.js" />
     <Content Include="js\contactus.js" />
     <Content Include="js\index.js" />
@@ -165,9 +163,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UploadedImages\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
