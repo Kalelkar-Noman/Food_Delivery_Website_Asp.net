@@ -66,7 +66,7 @@ window.addEventListener("load", function () {
     // Check if the cookie exists
     //
     if (document.cookie.includes("loginstatus")) {
-        if (document.cookie.includes("loginstatus=true") && document.cookie.includes("user_type=Admin")) {
+        if (document.cookie.includes("loginstatus=true") && document.cookie.includes("user_type=admin")) {
             adminpage.style.display = "inline-block";
         }
         else {

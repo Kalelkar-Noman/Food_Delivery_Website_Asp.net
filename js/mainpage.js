@@ -93,8 +93,8 @@ plusBtn.addEventListener("click", (event) => {
 
 window.onload = function () {
   const elems = document.querySelectorAll(".category_icon");
-  elems.forEach((element) => {
-    switch (element.textContent) {
+    elems.forEach((element) => {
+        switch (element.textContent.toLocaleLowerCase()) {
       case "sushi":
         element.innerHTML = "🍣";
         break;
@@ -103,6 +103,9 @@ window.onload = function () {
         break;
       case "pizza":
         element.innerHTML = "🍕";
+                break;
+      case "chicken":
+        element.innerHTML = "🍗";
         break;
     }
   });

@@ -12,6 +12,7 @@ namespace Food_Delivery_Website
     public partial class WebForm1 : System.Web.UI.Page
     {
         readonly SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Food_DeliveryConnectionString"].ConnectionString);
+        //readonly SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Projects\\Food_Delivery_Website_Asp.net\\DB\\Food_Delivery.mdf;Integrated Security=True;Connect Timeout=30");
         protected void Page_Load(object sender, EventArgs e)
         {
             string Product_Id = Request.QueryString["ProductId"];

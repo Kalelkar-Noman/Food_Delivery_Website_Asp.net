@@ -13,6 +13,7 @@ namespace Food_Delivery_Website
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
+        //readonly SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Projects\\Food_Delivery_Website_Asp.net\\DB\\Food_Delivery.mdf;Integrated Security=True;Connect Timeout=30");
         //readonly SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\KNA\\Documents\\Projects_College\\Food_Delivery_Website\\DB\\Food_Delivery.mdf;Integrated Security=True;Connect Timeout=30");
         readonly SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Food_DeliveryConnectionString"].ConnectionString);
         public void Refresher(string Query)
@@ -61,21 +62,25 @@ namespace Food_Delivery_Website
             {
                 string cookieValue = cookie.Value;
                 SqlCommand cmd = new SqlCommand("select * from Users where id='" + cookieValue + "'", con);
+                string access = "";
                 try
                 {
                     con.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
+                    
                     if (dr.HasRows)
                     {
                         dr.Read();
-                        if (dr["user_access"].ToString() == "Admin")
-                        {
-                            Refresher("select * from Items");
-                        }
-                        else
-                        {
-                            Response.Redirect("Main_Page.aspx");
-                        }
+                        access = dr["user_access"].ToString();
+                        //if (access == "admin")
+                        //{
+                        //    //con.Close();
+                        //    Refresher("select * from Items");
+                        //}
+                        //else
+                        //{
+                        //    Response.Redirect("Main_Page.aspx");
+                        //}
                     }
                 }
                 catch (Exception ee)
@@ -85,7 +90,17 @@ namespace Food_Delivery_Website
                 }
                 finally
                 {
+
                     con.Close();
+                    if (access == "admin")
+                    {
+                        //con.Close();
+                        Refresher("select * from Items");
+                    }
+                    else
+                    {
+                        Response.Redirect("Main_Page.aspx");
+                    }
                 }
             }
             else
@@ -99,12 +114,12 @@ namespace Food_Delivery_Website
         protected void Admin_add_submit_Click(object sender, EventArgs e)
         {
             string originalFilename = Path.GetFileName(Item_image.FileName);
-            string extension = Path.GetExtension(originalFilename);
+            //string extension = Path.GetExtension(originalFilename);
             //string newFilename = "image_" + Guid.NewGuid().ToString() + extension;
-            string newFilename = $"image_{Guid.NewGuid()}{extension}";
-            string filepath = Server.MapPath("~/UploadedImages/ ") + newFilename;
+            //string newFilename = $"image_{Guid.NewGuid()}{extension}";
+            string filepath = Server.MapPath("~/UploadedImages/ ") + originalFilename;
             Item_image.SaveAs(filepath);
-            Querier("INSERT INTO Items(item_name,item_price,item_image,item_category,item_description) Values('" + Item_name.Text + "','" + Item_price.Text + "','" + newFilename + "','" + Item_category.Text + "','"+Item_description.Text+"')");
+            Querier("INSERT INTO Items(item_name,item_price,item_image,item_category,item_description) Values('" + Item_name.Text + "','" + Item_price.Text + "','" + originalFilename + "','" + Item_category.Text + "','"+Item_description.Text+"')");
             Refresher("select * from Items");
         }
 

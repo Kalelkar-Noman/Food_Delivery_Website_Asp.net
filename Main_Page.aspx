@@ -93,7 +93,7 @@
         <div class="cart-item">
             <h3>Product Name</h3>
             <div class="cart-side-panel">
-                <img src="/img/pizza.png" alt="Product Image" />
+                <img src="/img/logo.jpg" alt="Product Image" />
                 <div class="sidepanel-quantity-price">
                     <p class="price">$19.99</p>
                     <div class="quantity">
