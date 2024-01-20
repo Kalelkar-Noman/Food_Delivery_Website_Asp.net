@@ -1,12 +1,16 @@
 ﻿
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./Homepage.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./homepage2.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./search.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./signup.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)z
+![App Screenshot](./productdetail.png)
+
+![App Screenshot](./Checkout.png)
+
+![App Screenshot](./admin.png)

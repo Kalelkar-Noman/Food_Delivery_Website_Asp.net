@@ -90,6 +90,13 @@
     <Content Include="js\Signup.js" />
     <Content Include="Main_Page.aspx" />
     <Content Include="Profile_Page.aspx" />
+    <Content Include="Readme-Images\admin.png" />
+    <Content Include="Readme-Images\Checkout.png" />
+    <Content Include="Readme-Images\Homepage.png" />
+    <Content Include="Readme-Images\homepage2.png" />
+    <Content Include="Readme-Images\productdetail.png" />
+    <Content Include="Readme-Images\search.png" />
+    <Content Include="Readme-Images\signup.png" />
     <Content Include="SignUp-User.aspx" />
     <Content Include="UploadedImages\cheeseburger1.jpg" />
     <Content Include="UploadedImages\cheeseburger2.jpg" />

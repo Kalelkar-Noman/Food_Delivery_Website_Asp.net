@@ -56,6 +56,7 @@ namespace Food_Delivery_Website
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            Refresher("select * from Items");
             HttpCookie cookie = Request.Cookies["user_id"];
             
             if (cookie != null)

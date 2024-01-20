@@ -9,8 +9,8 @@
             <div class="Delivery_profile del_shadows">
                 <div class="del_p_img">
                     <i class="ri-user-follow-line"></i>
-                    <h2>
-                        <asp:Label ID="Label1" runat="server" Text="User"></asp:Label></h2>
+                    <h2 class="width20vw">
+                        <asp:Label ID="userName" runat="server" Text="User"></asp:Label></h2>
                 </div>
                 <%--<div class="del_logout_btn"><button >Logout</button></div>--%>
             </div>
