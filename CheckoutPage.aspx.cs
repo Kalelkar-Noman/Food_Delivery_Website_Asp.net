@@ -15,40 +15,40 @@ namespace Food_Delivery_Website
         //readonly SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Projects\\Food_Delivery_Website_Asp.net\\DB\\Food_Delivery.mdf;Integrated Security=True;Connect Timeout=30");
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie cookie = Request.Cookies["user_id"];
-            string cookieValue = cookie.Value;
-            if (cookie != null)
-            {
-
-                SqlCommand cmd = new SqlCommand("select * from Users where id='" + cookieValue + "'", con);
-                try
-                {
-                    con.Open();
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    if (dr.HasRows)
-                    {
-                        dr.Read();
-                        Label1.Text = dr["user_name"].ToString();
-                    }
-                    else
-                    {
-                        Label1.Text ="please log in";
-                    }
-                }
-                catch (Exception ee)
-                {
-                    //  Response.Write(ee.Message);
-                    ScriptManager.RegisterStartupScript(Page, this.GetType(), "alert", "alert('OOPs, something went wrong''" + ee.Message + "' );", true);
-                }
-                finally
-                {
-                    con.Close();
-                }
-            }
-            else
-            {
-                Response.Redirect("Main_Page.aspx");
-            }
+            //HttpCookie cookie = Request.Cookies["user_id"];
+           
+            //if (cookie != null)
+            //{
+            //    string cookieValue = cookie.Value;
+            //    SqlCommand cmd = new SqlCommand("select * from Users where id='" + cookieValue + "'", con);
+            //    try
+            //    {
+            //        con.Open();
+            //        SqlDataReader dr = cmd.ExecuteReader();
+            //        if (dr.HasRows)
+            //        {
+            //            dr.Read();
+            //            Label1.Text = dr["user_name"].ToString();
+            //        }
+            //        else
+            //        {
+            //            Label1.Text ="please log in";
+            //        }
+            //    }
+            //    catch (Exception ee)
+            //    {
+            //        //  Response.Write(ee.Message);
+            //        ScriptManager.RegisterStartupScript(Page, this.GetType(), "alert", "alert('OOPs, something went wrong''" + ee.Message + "' );", true);
+            //    }
+            //    finally
+            //    {
+            //        con.Close();
+            //    }
+            //}
+            //else
+            //{
+            //    Response.Redirect("Main_Page.aspx");
+            //}
         }
     }
 }

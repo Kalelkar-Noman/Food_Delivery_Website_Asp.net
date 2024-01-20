@@ -163,7 +163,7 @@ a {
     position: relative;
     -webkit-box-shadow: 0 2px 7px #dfdfdf;
     box-shadow: 0 2px 7px #dfdfdf;
-    margin: 50px auto;
+    margin: 0 auto;
     overflow: hidden;
     background: #fafafa;
     border-radius: 1rem;
@@ -233,7 +233,10 @@ a {
     text-decoration: none;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
-    transition: 0.3s
+    transition: 0.3s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
 }
 
     .product-details h4 a:hover {

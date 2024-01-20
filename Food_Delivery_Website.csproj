@@ -179,6 +179,7 @@
   <ItemGroup>
     <Content Include="Index.Master" />
     <None Include="packages.config" />
+    <Content Include="Readme.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
