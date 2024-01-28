@@ -59,7 +59,7 @@
                             <div class="product-price"><small>$96.00</small>$<%#DataBinder.Eval(Container,"DataItem.item_price")%></div>
                             <div class="product-links">
 
-                                <a href="#"><i class="ri-shopping-cart-fill"></i></a>
+                                <a href="#" class="for-asp-access" data-id=<%#DataBinder.Eval(Container,"DataItem.item_id")%> data-image="./UploadedImages/<%#DataBinder.Eval(Container,"DataItem.item_image")%>" data-price=<%#DataBinder.Eval(Container,"DataItem.item_price")%> data-product-name=<%#DataBinder.Eval(Container,"DataItem.item_name")%> id='shop-btn-<%#DataBinder.Eval(Container,"DataItem.item_id")%>'><i class="ri-shopping-cart-fill"></i></a>
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
     <div id="mySidepanel" class="sidepanel headergap">
         <a href="#" class="closebtn" id="cart-close">×</a>
         <!-- <p>This is the side panel content.</p> -->
-        <div class="cart-item">
+        <%--<div class="cart-item">
             <h3>Product Name</h3>
             <div class="cart-side-panel">
                 <img src="/img/pizza.png" alt="Product Image" />
@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>--%>
         <!--  -->
     </div>
 

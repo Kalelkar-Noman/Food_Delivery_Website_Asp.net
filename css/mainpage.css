@@ -150,6 +150,7 @@
     -ms-flex-align: center;
     align-items: center;
     padding: 0 3rem;
+    padding-bottom:2rem;
     gap: 3rem;
     background-color: #bbbab9
 }
