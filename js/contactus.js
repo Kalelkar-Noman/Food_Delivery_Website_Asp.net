@@ -6,7 +6,7 @@ ml.addEventListener("click", (event) => {
 function sendmail() {
     //event.preventdefault();
     (function () {
-        emailjs.init("Etq9tDOuA-Gr9aJ3o");
+        emailjs.init("you js code");
     })();
     var params = {
         sendername: "ashish",
@@ -16,8 +16,8 @@ function sendmail() {
         message:
             "Thanks for contacting us ",
     };
-    var serviceid = "service_nhseehn";
-    var templateid = "template_0xc4xrv";
+    var serviceid = "your service id";
+    var templateid = "your template id";
     emailjs.send(serviceid, templateid, params).then(
         function (response) {
             console.log("SUCCESS!", response.status, response.text);

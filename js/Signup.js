@@ -12,7 +12,7 @@ otpbtn.addEventListener("click", () => {
 });
 function sendmail(otp) {
   (function () {
-    emailjs.init("Etq9tDOuA-Gr9aJ3o");
+    emailjs.init("your");
   })();
   var params = {
     sendername: "ashish",
@@ -23,8 +23,8 @@ function sendmail(otp) {
       "ashish singh this is a project message please don't worry it looks like sended by mistake " +
       otp,
   };
-  var serviceid = "service_nhseehn";
-  var templateid = "template_0xc4xrv";
+  var serviceid = "your service id";
+  var templateid = "your template id";
   emailjs.send(serviceid, templateid, params).then(
     function (response) {
       console.log("SUCCESS!", response.status, response.text);
